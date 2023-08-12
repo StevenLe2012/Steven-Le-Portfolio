@@ -1,4 +1,7 @@
-const preload = () => {
+import * as THREE from 'three';
+import { FontLoader } from 'three/addons/loaders/FontLoader.js';
+
+export const preload = () => {
 
   let manager = new THREE.LoadingManager();
   manager.onLoad = function() { 
@@ -6,16 +9,16 @@ const preload = () => {
   }
 
   var typo = null;
-  const loader = new THREE.FontLoader( manager );
+  const loader = new FontLoader( manager );
   const font = loader.load('https://res.cloudinary.com/dydre7amr/raw/upload/v1612950355/font_zsd4dr.json', function ( font ) { typo = font; });
   const particle = new THREE.TextureLoader( manager ).load( 'https://res.cloudinary.com/dfvtkoboz/image/upload/v1605013866/particle_a64uzf.png');
 
 }
 
-if ( document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll))
-  preload ();
-else
-  document.addEventListener("DOMContentLoaded", preload ); 
+// if ( document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll))
+//   preload ();
+// else
+//   document.addEventListener("DOMContentLoaded", preload ); 
 
 class Environment {
 
@@ -97,11 +100,11 @@ class CreateParticles {
 
 		this.data = {
 
-			text: 'FUTURE\nIS NOW',
-			amount: 1500,
+			text: "Hi, I'm Steven\nXR Developor\n@ Stanford",
+			amount: 400,
 			particleSize: 1,
 			particleColor: 0xffffff,
-			textSize: 16,
+			textSize: 10,
 			area: 250,
 			ease: .05,
 		}
@@ -278,11 +281,71 @@ class CreateParticles {
 		}
 	}
 
+	calculateMobile() {
+		const screenWidth = window.innerWidth;
+		// const mobileThreshold = 768; // Set a threshold for mobile screen width
+		const mobileLargeThreshold = 1100;
+		const mobileSmallThreshhold = 650;
+		
+		// Match device type with screen size and adjust data parameters
+		if (screenWidth > mobileLargeThreshold) {
+			// isDesktop
+			console.log("isDesktop")
+			this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
+			this.data.amount = 400;
+			this.data.particleSize = 2;
+			this.data.particleColor = 0xffffff,
+			this.data.textSize = 10;
+			this.data.area = 250;
+			this.data.ease = 0.05;
+		} else if (screenWidth > mobileSmallThreshhold) {
+			// isMobileLarge
+			console.log("isMobileLarge")
+			this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
+			this.data.amount = 300;
+			this.data.particleSize = 1.25;
+			this.data.textSize = 6;
+			this.data.area = 100;
+		} else {
+			// isMobileSmall
+			console.log("isMobileSmall")
+			this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
+			this.data.amount = 200;
+			this.data.particleSize = 1;
+			this.data.textSize = 4.5;
+			this.data.area = 25;
+		}
+	}
+
+	// this.data = {
+
+	// 	text: "Hi, I'm Steven\nXR Developor\n@ Stanford",
+	// 	amount: 400,
+	// 	particleSize: 1.5,
+	// 	particleColor: 0xffffff,
+	// 	textSize: 10,
+	// 	area: 250,
+	// 	ease: .05,
+	// }
+
+	calculateTextSize() {
+		const screenWidth = window.innerWidth;
+		const screenHeight = window.innerHeight;
+		const baseTextSize = this.data.textSize
+		console.log("BaseTextSize: " + baseTextSize)
+		const scaleFactor =  .00390625; // Set a scaling factor
+		
+		// Calculate the dynamic text size based on the screen resolution
+		this.data.textSize = baseTextSize + (Math.min(screenWidth, screenHeight) * scaleFactor);
+	}
+
 	createText(){ 
 
 		let thePoints = [];
-
-		let shapes = this.font.generateShapes( this.data.text , this.data.textSize  );
+		this.calculateMobile();
+		this.calculateTextSize();
+		console.log("Text Size is:" + this.data.textSize)
+		let shapes = this.font.generateShapes(this.data.text, this.data.textSize); // Use a larger text size for mobile devices
 		let geometry = new THREE.ShapeGeometry( shapes );
 		geometry.computeBoundingBox();
 	
@@ -336,14 +399,38 @@ class CreateParticles {
 		geoParticles.setAttribute( 'customColor', new THREE.Float32BufferAttribute( colors, 3 ) );
 		geoParticles.setAttribute( 'size', new THREE.Float32BufferAttribute( sizes, 1) );
 
+		const vertexShaderSource = `
+			attribute float size;
+			attribute vec3 customColor;
+			varying vec3 vColor;
+
+			void main() {
+				vColor = customColor;
+				vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+				gl_PointSize = size * (300.0 / -mvPosition.z);
+				gl_Position = projectionMatrix * mvPosition;
+			}
+		`;
+
+		const fragmentShaderSource = `
+			uniform vec3 color;
+			uniform sampler2D pointTexture;
+			varying vec3 vColor;
+
+			void main() {
+				gl_FragColor = vec4(color * vColor, 1.0);
+				gl_FragColor = gl_FragColor * texture2D(pointTexture, gl_PointCoord);
+			}
+		`;
+
 		const material = new THREE.ShaderMaterial( {
 
 			uniforms: {
 				color: { value: new THREE.Color( 0xffffff ) },
 				pointTexture: { value: this.particleImg }
 			},
-			vertexShader: document.getElementById( 'vertexshader' ).textContent,
-			fragmentShader: document.getElementById( 'fragmentshader' ).textContent,
+			vertexShader: vertexShaderSource,
+			fragmentShader: fragmentShaderSource,
 
 			blending: THREE.AdditiveBlending,
 			depthTest: false,

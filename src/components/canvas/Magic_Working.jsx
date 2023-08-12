@@ -3,7 +3,64 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from 'three';
 import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import CanvasLoader from "../Loader";
-import { Preload } from "@react-three/drei";
+import ComputersCanvas from "./Computers";
+
+// import vertexShader from './shaders/vertexShader.vert';
+// import fragmentShader from './shaders/fragmentShader.frag';
+// import { FontLoader } from "@react-three/"
+
+// const MagicEnvironment = ({ font, particle }) => {
+//   const magicEnvironmentRef = React.useRef(null);
+
+//   React.useEffect(() => {
+//     const container = magicEnvironmentRef.current;
+//     const scene = new THREE.Scene();
+//     const camera = createCamera(container);
+//     const renderer = createRenderer(container);
+//     const createParticles = new CreateParticles(scene, font, particle, camera, renderer);
+
+//     bindEvents(container, camera, renderer);
+//     setup(createParticles);
+//     render(createParticles, renderer, scene, camera);
+//   }, [font, particle]);
+
+//   const bindEvents = (container, camera, renderer) => {
+//     window.addEventListener('resize', () => onWindowResize(container, camera, renderer));
+//   };
+
+//   const setup = (createParticles) => {
+//     createParticles.setup();
+//   };
+
+//   const render = (createParticles, renderer, scene, camera) => {
+//     createParticles.render();
+//     renderer.render(scene, camera);
+//   };
+
+//   const createCamera = (container) => {
+//     const camera = new THREE.PerspectiveCamera(65, container.clientWidth / container.clientHeight, 1, 10000);
+//     camera.position.set(0, 0, 100);
+//     return camera;
+//   };
+
+//   const createRenderer = (container) => {
+//     const renderer = new THREE.WebGLRenderer();
+//     renderer.setSize(container.clientWidth, container.clientHeight);
+//     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+//     renderer.outputEncoding = THREE.sRGBEncoding;
+//     container.appendChild(renderer.domElement);
+//     renderer.setAnimationLoop(() => render(createParticlesRef.current, renderer, sceneRef.current, cameraRef.current));
+//     return renderer;
+//   };
+
+//   const onWindowResize = (container, camera, renderer) => {
+//     camera.aspect = container.clientWidth / container.clientHeight;
+//     camera.updateProjectionMatrix();
+//     renderer.setSize(container.clientWidth, container.clientHeight);
+//   };
+
+//   return <div id="magic" ref={magicEnvironmentRef} />;
+// };
 
 class Environment {
 
@@ -96,7 +153,16 @@ class CreateParticles {
 
     this.setup();
     this.bindEvents();
+
+		// Call an async initialization method
+    // this.init();
   }
+
+  async init() {
+      await this.setup();
+      this.bindEvents();
+  }
+
 
 	setup(){
 
@@ -264,6 +330,23 @@ class CreateParticles {
 		}
 	}
 
+  async loadShaderFile(shaderFilePath) {
+    try {
+        const response = await fetch(shaderFilePath);
+        if (response.ok) {
+            console.log("Hi");
+            console.log(response.text());
+            return await response.text();
+        } else {
+            console.error("Failed to load shader file:", response.statusText);
+            return null;
+        }
+    } catch (error) {
+        console.error("Error loading shader file:", error);
+        return null;
+    }
+  }
+
 	createText(){ 
 
 		let thePoints = [];
@@ -327,29 +410,32 @@ class CreateParticles {
 		geoParticles.setAttribute( 'customColor', new THREE.Float32BufferAttribute( colors, 3 ) );
 		geoParticles.setAttribute( 'size', new THREE.Float32BufferAttribute( sizes, 1) );
 
-    	const vertexShaderSource = `
-			attribute float size;
-			attribute vec3 customColor;
-			varying vec3 vColor;
+    // const vertexShaderSource = await this.loadShaderFile('shader/vertexShader.vert');
+    // const fragmentShaderSource = await this.loadShaderFile('shader/fragmentShader.frag');
 
-			void main() {
-				vColor = customColor;
-				vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-				gl_PointSize = size * (300.0 / -mvPosition.z);
-				gl_Position = projectionMatrix * mvPosition;
-			}
-		`;
+    const vertexShaderSource = `
+        attribute float size;
+        attribute vec3 customColor;
+        varying vec3 vColor;
 
-		const fragmentShaderSource = `
-			uniform vec3 color;
-			uniform sampler2D pointTexture;
-			varying vec3 vColor;
+        void main() {
+            vColor = customColor;
+            vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+            gl_PointSize = size * (300.0 / -mvPosition.z);
+            gl_Position = projectionMatrix * mvPosition;
+        }
+    `;
 
-			void main() {
-				gl_FragColor = vec4(color * vColor, 1.0);
-				gl_FragColor = gl_FragColor * texture2D(pointTexture, gl_PointCoord);
-			}
-		`;
+    const fragmentShaderSource = `
+        uniform vec3 color;
+        uniform sampler2D pointTexture;
+        varying vec3 vColor;
+
+        void main() {
+            gl_FragColor = vec4(color * vColor, 1.0);
+            gl_FragColor = gl_FragColor * texture2D(pointTexture, gl_PointCoord);
+        }
+    `;
 
 		const material = new THREE.ShaderMaterial( {
 
@@ -397,20 +483,37 @@ class CreateParticles {
 	}
 }
 
-const Magic = () => {
-//   const fontURL = "https://res.cloudinary.com/dydre7amr/raw/upload/v1612950355/font_zsd4dr.json";
-//   const particleURL = "https://res.cloudinary.com/dfvtkoboz/image/upload/v1605013866/particle_a64uzf.png";
+const MagicCanvas = () => {
+  // const containerRef = useRef(null);
+  // const fontURL = "https://res.cloudinary.com/dydre7amr/raw/upload/v1612950355/font_zsd4dr.json";
+  // const particleURL = "https://res.cloudinary.com/dfvtkoboz/image/upload/v1605013866/particle_a64uzf.png";
   
-//   let manager = new THREE.LoadingManager();
-//   manager.onLoad = function() { 
-//     const environment = new Environment( typo, particle );
-//   }
+  let manager = new THREE.LoadingManager();
+  manager.onLoad = function() { 
+    const environment = new Environment( typo, particle );
+  }
 
-//   var typo = null;
-//   const loader = new FontLoader( manager );
-//   const font = loader.load(fontURL, function ( font ) { typo = font; });
-//   const particle = new THREE.TextureLoader( manager ).load(particleURL);
+  var typo = null;
+  const loader = new FontLoader( manager );
+  const font = loader.load('https://res.cloudinary.com/dydre7amr/raw/upload/v1612950355/font_zsd4dr.json', function ( font ) { typo = font; });
+  const particle = new THREE.TextureLoader( manager ).load( 'https://res.cloudinary.com/dfvtkoboz/image/upload/v1605013866/particle_a64uzf.png');
 
+  // if (!font || !particle) {
+  //   console.error('Missing font or particle prop in MagicCanvas component');
+  //   return null;
+  // }
+
+  // if (!containerRef.current) {
+  //   console.error('Missing containerRef in MagicCanvas component');
+  //   return null;
+  // }
+
+  // return (
+  //   <div ref={containerRef}>
+  //       {/* <MagicEnvironment font={font} particle={particle}  /> */}
+  //   </div>
+  // );
+  // return <div id="magic" />;
   return <div id="magic"></div>;
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -460,7 +563,7 @@ const Magic = () => {
 };
 
 
-const MagicCanvas = () => {
+// const MagicCanvas = () => {
 //   const [isLoaded, setIsLoaded] = useState(false);
 
 //   useEffect(() => {
@@ -468,51 +571,23 @@ const MagicCanvas = () => {
 //       setIsLoaded(true);
 //     };
 //   }, []);
-	const [isMobile, setIsMobile] = useState(false);
 
-	useEffect(() => {
-		// Add a listener for changes to the screen size
-		const mediaQuery = window.matchMedia("(max-width: 500px)");
+//   return (isLoaded && <Magic /> &&
+//     <Canvas
+//       frameloop='demand'
+//       shadows
+//       dpr={[1, 2]}
+//       camera={{ position: [20, 3, 5], fov: 25 }}
+//       gl={{ preserveDrawingBuffer: true }}
+//     >
+      
+//       {/* <Suspense fallback={<CanvasLoader />}>
+        
+//       </Suspense> */}
 
-		// Set the initial value of the `isMobile` state variable
-		setIsMobile(mediaQuery.matches);
-
-		// Define a callback function to handle changes to the media query
-		const handleMediaQueryChange = (event) => {
-		setIsMobile(event.matches);
-		};
-
-		// Add the callback function as a listener for changes to the media query
-		mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-		// Remove the listener when the component is unmounted
-		return () => {
-		mediaQuery.removeEventListener("change", handleMediaQueryChange);
-		};
-	}, []);
-
-	const fontURL = "https://res.cloudinary.com/dydre7amr/raw/upload/v1612950355/font_zsd4dr.json";
-	const particleURL = "https://res.cloudinary.com/dfvtkoboz/image/upload/v1605013866/particle_a64uzf.png";
-	
-	let manager = new THREE.LoadingManager();
-	manager.onLoad = function() { 
-	  const environment = new Environment( typo, particle );
-	}
-  
-	var typo = null;
-	const loader = new FontLoader( manager );
-	const font = loader.load(fontURL, function ( font ) { typo = font; });
-	const particle = new THREE.TextureLoader( manager ).load(particleURL);
-
-	return (
-		<Canvas>
-		<Suspense fallback={<CanvasLoader />}>
-			<Magic />
-		</Suspense>
-
-		<Preload all />
-		</Canvas>
-	);
-};
+//       {/* <Preload all /> */}
+//     </Canvas>
+//   );
+// };
 
 export default MagicCanvas;
