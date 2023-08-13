@@ -1,24 +1,23 @@
 import * as THREE from 'three';
 import { FontLoader } from 'three/addons/loaders/FontLoader.js';
+import debounce from 'lodash/debounce';
 
-export const preload = () => {
+const preload = () => {
+	let manager = new THREE.LoadingManager();
+	manager.onLoad = function() { 
+		const environment = new Environment( typo, particle );
+	}
 
-  let manager = new THREE.LoadingManager();
-  manager.onLoad = function() { 
-    const environment = new Environment( typo, particle );
-  }
-
-  var typo = null;
-  const loader = new FontLoader( manager );
-  const font = loader.load('https://res.cloudinary.com/dydre7amr/raw/upload/v1612950355/font_zsd4dr.json', function ( font ) { typo = font; });
-  const particle = new THREE.TextureLoader( manager ).load( 'https://res.cloudinary.com/dfvtkoboz/image/upload/v1605013866/particle_a64uzf.png');
-
+	var typo = null;
+	const loader = new FontLoader( manager );
+	const font = loader.load('https://res.cloudinary.com/dydre7amr/raw/upload/v1612950355/font_zsd4dr.json', function ( font ) { typo = font; });
+	const particle = new THREE.TextureLoader( manager ).load( 'https://res.cloudinary.com/dfvtkoboz/image/upload/v1605013866/particle_a64uzf.png');
 }
 
-// if ( document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll))
-//   preload ();
-// else
-//   document.addEventListener("DOMContentLoaded", preload ); 
+if ( document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll))
+  preload ();
+else
+  document.addEventListener("DOMContentLoaded", preload ); 
 
 class Environment {
 
@@ -42,7 +41,7 @@ class Environment {
 
   setup(){ 
 
-    this.createParticles = new CreateParticles( this.scene, this.font,             this.particle, this.camera, this.renderer );
+    this.createParticles = new CreateParticles( this.scene, this.font, this.particle, this.camera, this.renderer );
   }
 
   render() {
@@ -66,6 +65,8 @@ class Environment {
     this.renderer.setPixelRatio( Math.min( window.devicePixelRatio, 2));
 
     this.renderer.outputEncoding = THREE.sRGBEncoding;
+
+	this.renderer.setClearAlpha(0);
     this.container.appendChild( this.renderer.domElement );
 
     this.renderer.setAnimationLoop(() => { this.render() })
@@ -111,32 +112,74 @@ class CreateParticles {
 
 		this.setup();
 		this.bindEvents();
-
+		
 	}
-
 
 	setup(){
 
 		const geometry = new THREE.PlaneGeometry( this.visibleWidthAtZDepth( 100, this.camera ), this.visibleHeightAtZDepth( 100, this.camera ));
-		const material = new THREE.MeshBasicMaterial( { color: 0x00ff00, transparent: true } );
+		const material = new THREE.MeshBasicMaterial( { color: 0x000000, transparent: true, opacity: 0.0 } );
 		this.planeArea = new THREE.Mesh( geometry, material );
 		this.planeArea.visible = false;
-		this.createText();
 
+		this.createText();
+		
+		this.observeMutation();
 	}
 
 	bindEvents() {
-
 		document.addEventListener( 'mousedown', this.onMouseDown.bind( this ));
 		document.addEventListener( 'mousemove', this.onMouseMove.bind( this ));
 		document.addEventListener( 'mouseup', this.onMouseUp.bind( this ));
-		
+
+		document.addEventListener( 'touchstart', this.OnTouchStart.bind( this ));
+		document.addEventListener( 'touchmove', this.OnTouchMove.bind( this ));
+		document.addEventListener( 'touchend', this.OnTouchEnd.bind( this ));
+
+		this.debouncedResize = debounce(this.onWindowResize.bind(this), 200);
+		window.addEventListener('resize', this.debouncedResize);
 	}
 
+	observeMutation() {
+		const targetNode = document.getElementById("magic");
+		const config = { attributes: true, attributeOldValue: true };
+
+		const callback = function(mutationsList, observer) {
+			for(const mutation of mutationsList) {
+				if (mutation.type === 'attributes' && mutation.attributeName === 'disabled') {
+					if (mutation.oldValue === null) {
+						// Magic no longer in frame
+						this.clearText();
+						
+					} else {
+						// Magic is now in frame
+						this.calculateMobile();
+						this.calculateTextSize();
+						this.clearText();
+						this.createText();
+					}
+				}
+			}
+		}.bind(this);
+
+		// Create an observer instance linked to the callback function
+		this.observer = new MutationObserver(callback);
+
+		// Start observing the target node for configured mutations
+		this.observer.observe(targetNode, config);
+	}
+
+	onWindowResize(){
+
+		this.calculateMobile();
+		this.calculateTextSize();
+		this.clearText();
+		this.createText();
+	  }
+
 	onMouseDown(){
-		
-		this.mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-		this.mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+		this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+		this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
 		const vector = new THREE.Vector3( this.mouse.x, this.mouse.y, 0.5);
 		vector.unproject( this.camera );
@@ -147,24 +190,45 @@ class CreateParticles {
 		const pos = this.particles.geometry.attributes.position;
 		this.buttom = true;
 		this.data.ease = .01;
-		
 	}
 
 	onMouseUp(){
-
 		this.buttom = false;
 		this.data.ease = .05;
 	}
 
 	onMouseMove( ) { 
+		this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+		this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+	}
 
-	    this.mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-	    this.mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+	OnTouchStart(event) {
+		this.mouse.x = (event.touches[0].clientX / window.innerWidth) * 2 - 1;
+		this.mouse.y = (event.touches[0].clientY / window.innerHeight) * 2 + 1;
 
+		const vector = new THREE.Vector3(this.mouse.x, this.mouse.y, 0.5);
+		vector.unproject(this.camera);
+		const dir = vector.sub(this.camera.position).normalize();
+		const distance = -this.camera.position.z / dir.z;
+		this.currenPosition = this.camera.position.clone().add(dir.multiplyScalar(distance));
+
+		const pos = this.particles.geometry.attributes.position;
+		this.buttom = true;
+		this.data.ease = 0.01;
+	}
+
+	OnTouchEnd(event) {
+		this.buttom = false;
+		this.data.ease = 0.05;
+	}
+
+	OnTouchMove(event) {
+		this.mouse.x = (event.touches[0].clientX / window.innerWidth) * 2 - 1;
+		this.mouse.y = (event.touches[0].clientY / window.innerHeight) * 2 + 1;
 	}
 
 	render( level ){ 
-
+		
 		const time = ((.001 * performance.now())%12)/12;
 		const zigzagTime = (1 + (Math.sin( time * 2 * Math.PI )))/6;
 
@@ -290,7 +354,6 @@ class CreateParticles {
 		// Match device type with screen size and adjust data parameters
 		if (screenWidth > mobileLargeThreshold) {
 			// isDesktop
-			console.log("isDesktop")
 			this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
 			this.data.amount = 400;
 			this.data.particleSize = 2;
@@ -300,43 +363,38 @@ class CreateParticles {
 			this.data.ease = 0.05;
 		} else if (screenWidth > mobileSmallThreshhold) {
 			// isMobileLarge
-			console.log("isMobileLarge")
 			this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
 			this.data.amount = 300;
 			this.data.particleSize = 1.25;
+			this.data.particleColor = 0xffffff,
 			this.data.textSize = 6;
 			this.data.area = 100;
+			this.data.ease = 0.04;
 		} else {
 			// isMobileSmall
-			console.log("isMobileSmall")
 			this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
 			this.data.amount = 200;
 			this.data.particleSize = 1;
+			this.data.particleColor = 0xffffff,
 			this.data.textSize = 4.5;
 			this.data.area = 25;
+			this.data.ease = 0.03;
 		}
 	}
-
-	// this.data = {
-
-	// 	text: "Hi, I'm Steven\nXR Developor\n@ Stanford",
-	// 	amount: 400,
-	// 	particleSize: 1.5,
-	// 	particleColor: 0xffffff,
-	// 	textSize: 10,
-	// 	area: 250,
-	// 	ease: .05,
-	// }
 
 	calculateTextSize() {
 		const screenWidth = window.innerWidth;
 		const screenHeight = window.innerHeight;
 		const baseTextSize = this.data.textSize
-		console.log("BaseTextSize: " + baseTextSize)
-		const scaleFactor =  .00390625; // Set a scaling factor
+		const scaleFactor =  .00390625;
 		
 		// Calculate the dynamic text size based on the screen resolution
 		this.data.textSize = baseTextSize + (Math.min(screenWidth, screenHeight) * scaleFactor);
+	}
+
+	clearText() {
+		this.scene.remove( this.particles );
+		this.geometryCopy.clearGroups();
 	}
 
 	createText(){ 
@@ -344,8 +402,7 @@ class CreateParticles {
 		let thePoints = [];
 		this.calculateMobile();
 		this.calculateTextSize();
-		console.log("Text Size is:" + this.data.textSize)
-		let shapes = this.font.generateShapes(this.data.text, this.data.textSize); // Use a larger text size for mobile devices
+		let shapes = this.font.generateShapes(this.data.text, this.data.textSize);
 		let geometry = new THREE.ShapeGeometry( shapes );
 		geometry.computeBoundingBox();
 	
@@ -468,43 +525,3 @@ class CreateParticles {
 	    return Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
 	}
 }
-
-
-
-      // JSX component code will be placed here
-      // ...
-
-
-
-
-
-//   const canvasRef = useRef(null);
-//   const glRef = useRef(null);
-//   const programRef = useRef(null);
-
-//   const vertexShaderSource = `
-//     attribute float size;
-//     attribute vec3 customColor;
-//     varying vec3 vColor;
-  
-//     void main() {
-//       vColor = customColor;
-//       vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-//       gl_PointSize = size * ( 300.0 / -mvPosition.z );
-//       gl_Position = projectionMatrix * mvPosition;
-//     }
-//   `;
-
-//   const fragmentShaderSource = `
-//     uniform vec3 color;
-//     uniform sampler2D pointTexture;
-//     varying vec3 vColor;
-  
-//     void main() {
-//       gl_FragColor = vec4( color * vColor, 1.0 );
-//       gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
-//     }
-//   `;
-  
-//   return <canvas ref={canvasRef} width={800} height={600}></canvas>;
-// };
