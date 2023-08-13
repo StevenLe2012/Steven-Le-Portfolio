@@ -6,7 +6,7 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import { me, github, linkedin, outlook } from "../assets"
+import { me, github, linkedin, outlook, resume } from "../assets"
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -49,20 +49,16 @@ const About = () => {
         className="flex items-center min-[1000px]:flex-row flex-col-reverse">
           {/* Left Column */}
           <div className="flex flex-col items-center min-[1000px]:items-start">
-            <p className="mt-4 text-secondary text-[17px] min-[1000px]:max-w-lg w-full leading-[30px]">
+            <p className="mt-4 text-secondary text-[17px] min-[1000px]:max-w-lg w-full leading-[30px]" style={{ textAlign: 'justify' }}>
               Hey there! I'm Steven, a Junior studying Computer Science at
-              Stanford University set to graduate with a Bachelor's and Master's
-              by June 2025.I'm currently looking for a summer 2024 internship
-              in software engineering or XR development.
+              Stanford University set to graduate with both a Bachelor's and Master's
+              by June 2025. I'm currently searching for Summer 2024 SWE or XR development internships.
               <br /> <br />
-              With three years of experience, my diverse portfolio reflects
-              my insatiable curiosity and drive to make a positive impact
-              through innovation. From enhancing ADHD screening using VR
-              to tailoring education through generative AI, I'm continually
-              seeking fresh avenues to create positive change in our world.
-              {/* <br /> <br />
-              As StanfordXR's Vice President of Events, I'm leading the creation of Stanford's
-              first nationwide XR hackathon. Last year, I organized a Vietnamese Culture Night for 700+ attendees as the Co-Chair of the Stanford Vietnamese Student Association. */}
+              With three years of experience, my diverse portfolio is a testament to
+              my unquenchable curiosity and unwavering drive to ignite impactful innovation.
+              Whether it's elevating ADHD screening through immersive VR or
+              reshaping education via generative AI, I'm always in
+              pursuit of new pathways to cultivate meaningful change.
               <br /> <br />
               I love working with people, and I'm always looking for new
               opportunities to grow. If this interests you, check out my
@@ -127,7 +123,7 @@ const About = () => {
             {/* Resume */}
             <Tilt className="h-full max-[1000px]:my-14">
               <div class="green-pink-gradient p-[1px] rounded-full flex justify-center items-center cursor-pointer mt-4 select-none">
-                  <a href="https://www.example.com" download="" className="py-3 px-8 rounded-xl outline-none text-white font-bold z-10">
+                  <a href={resume} title="Steven Le Resume" download className="py-3 px-8 rounded-xl outline-none text-white font-bold z-10">
                     <span className="hidden sm:inline">Download</span> Resume
                   </a>
               </div>
