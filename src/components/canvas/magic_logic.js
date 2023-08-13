@@ -101,7 +101,7 @@ class CreateParticles {
 
 		this.data = {
 
-			text: "Hi, I'm Steven\nXR Developor\n@ Stanford",
+			text: "Hi, I'm Steven\nXR Enthusiast\n@ Stanford",
 			amount: 400,
 			particleSize: 1,
 			particleColor: 0xffffff,
@@ -354,7 +354,7 @@ class CreateParticles {
 		// Match device type with screen size and adjust data parameters
 		if (screenWidth > mobileLargeThreshold) {
 			// isDesktop
-			this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
+			// this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
 			this.data.amount = 400;
 			this.data.particleSize = 2;
 			this.data.particleColor = 0xffffff,
@@ -363,7 +363,7 @@ class CreateParticles {
 			this.data.ease = 0.05;
 		} else if (screenWidth > mobileSmallThreshhold) {
 			// isMobileLarge
-			this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
+			// this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
 			this.data.amount = 300;
 			this.data.particleSize = 1.25;
 			this.data.particleColor = 0xffffff,
@@ -372,7 +372,7 @@ class CreateParticles {
 			this.data.ease = 0.04;
 		} else {
 			// isMobileSmall
-			this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
+			// this.data.text = "Hi, I'm Steven\nXR Developor\n@ Stanford"
 			this.data.amount = 200;
 			this.data.particleSize = 1;
 			this.data.particleColor = 0xffffff,
