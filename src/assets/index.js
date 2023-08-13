@@ -30,6 +30,10 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import linkedin from "./linkedin.png";
+import outlook from "./outlook.png";
+import me from "./steven_photo.jpg"
+
 export {
   logo,
   backend,
@@ -59,4 +63,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  linkedin,
+  outlook,
+  me
 };
