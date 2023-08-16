@@ -23,6 +23,12 @@ import {
   jobit,
   tripguide,
   threejs,
+  vr,
+  unity,
+  software_engineer,
+  generative_ai,
+  unity_colorful,
+
 } from "../assets";
 
 export const navLinks = [
@@ -50,20 +56,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "VR/AR Developer",
+    icon: vr,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    title: "Unity Developer",
+    icon: unity,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Software Engineer",
+    icon: software_engineer,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Generative AI Engineer",
+    icon: generative_ai,
   },
 ];
 

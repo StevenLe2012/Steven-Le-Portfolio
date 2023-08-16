@@ -35,6 +35,13 @@ import outlook from "./logo/outlook.png";
 import me from "./personal/steven_photo.jpg";
 import resume from "./personal/Le_Steven_Resume.pdf";
 
+import vr from "./skills/Futuristic VR Headset.png";
+import unity from "./logo/unity.png"
+import unity_colorful from "./skills/unity.png"
+import software_engineer from "./skills/software_engineer.png"
+import generative_ai from "./skills/generative_ai.png"
+
+
 export {
   logo,
   backend,
@@ -67,5 +74,10 @@ export {
   linkedin,
   outlook,
   resume,
-  me
+  me,
+  vr,
+  unity,
+  software_engineer,
+  generative_ai,
+  unity_colorful
 };

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, textVariant, zoomIn } from "../utils/motion";
 import { me, github, linkedin, outlook, resume } from "../assets"
 
 const ServiceCard = ({ index, title, icon }) => (
@@ -25,7 +25,7 @@ const ServiceCard = ({ index, title, icon }) => (
         <img
           src={icon}
           alt={title}
-          className='w-16 h-16 object-contain'
+          className='w-22 h-22 object-contain'
         />
 
         <h3 className='text-white text-[20px] font-bold text-center'>
@@ -39,11 +39,12 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
-      <div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </div>
-
+      <motion.div variants={textVariant()}>
+        <div variants={textVariant()}>
+          <p className={styles.sectionSubText}>Introduction</p>
+          <h2 className={styles.sectionHeadText}>Overview.</h2>
+        </div>
+      </motion.div>
       <div
         variants={fadeIn("", "", 0.1, 1)}
         className="flex items-center min-[1000px]:flex-row flex-col-reverse">
@@ -128,29 +129,12 @@ const About = () => {
                   </a>
               </div>
             </Tilt>
+        </div>
 
-            </div>
-      {/* Links */}
-      {/* <div className="flex mt-6 gap-5">
-          <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" className="bg-tertiary w-[50px] rounded-xl outline-none text-white font-bold shadow-md z-10" style={{ transform: 'translateY(-2.19125px) translateZ(0px)' }}>
-            <img src="/assets/linkedInButton-550870e1.png" alt="LinkedIn icon" className="object-cover w-full" />
-          </a>
-          <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-tertiary w-[50px] rounded-xl outline-none text-white font-bold shadow-md shadow-primary z-10" style={{ transform: 'translateY(-2.19125px) translateZ(0px)' }}>
-            <img src={github} alt="Github icon" className="object-cover w-full" />
-          </a>
-          <a href="https://www.example.com" download="" className="bg-[#33CC66] py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md shadow-primary z-10" style={{ transform: 'translateY(-2.19125px) translateZ(0px)' }}>
-            <span className="hidden sm:inline">Download</span> Resume
-          </a>
-        </div> */}
-        
-        {/* Links */} {/* w-full flex flex-col items-center justify-center */}
-        
-
-
-      <div className="mt-20 flex flex-wrap gap-10 justify-center">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+        <div className="mt-20 flex flex-wrap gap-10 justify-center">
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} index={index} {...service} />
+          ))}
       </div>
     </>
   );
