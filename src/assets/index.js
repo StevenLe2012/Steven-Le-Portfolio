@@ -41,6 +41,26 @@ import unity_colorful from "./skills/unity.png"
 import software_engineer from "./skills/software_engineer.png"
 import generative_ai from "./skills/generative_ai.png"
 
+import vizzario from "./company/vizzario.png";
+import stanford from "./company/stanford.png";
+import stanford_med_school from "./company/stanford_med_school.png";
+import big_river_steel from "./company/big_river_steel.png";
+
+import api from "./tech/api.png";
+import blender from "./tech/blender.png";
+import firebase from "./tech/firebase.png";
+import c from "./tech/c.png";
+import cpp from "./tech/cpp.png";
+import csharp from "./tech/csharp.png";
+import dart from "./tech/dart.png";
+import flutter from "./tech/flutter.png";
+import python from "./tech/python.png";
+import unity3d from "./tech/unity3d.png";
+import unreal_engine from "./tech/unreal_engine.png";
+import unreal_engine_inverted from "./tech/unreal_engine_inverted.png";
+import postman from "./tech/postman.png";
+import threejs_inverted from "./tech/threejs_inverted.png";
+
 
 export {
   logo,
@@ -79,5 +99,23 @@ export {
   unity,
   software_engineer,
   generative_ai,
-  unity_colorful
+  unity_colorful,
+  vizzario,
+  stanford,
+  stanford_med_school,
+  big_river_steel,
+  api,
+  blender,
+  firebase,
+  c,
+  cpp,
+  csharp,
+  dart,
+  flutter,
+  python,
+  unity3d,
+  unreal_engine,
+  unreal_engine_inverted,
+  postman,
+  threejs_inverted,
 };

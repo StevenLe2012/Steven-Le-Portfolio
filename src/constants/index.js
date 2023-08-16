@@ -28,6 +28,24 @@ import {
   software_engineer,
   generative_ai,
   unity_colorful,
+  stanford,
+  stanford_med_school,
+  vizzario,
+  big_river_steel,
+  api,
+  blender,
+  csharp,
+  firebase,
+  c,
+  cpp,
+  dart,
+  flutter,
+  python,
+  unity3d,
+  unreal_engine,
+  unreal_engine_inverted,
+  postman,
+  threejs_inverted,
 
 } from "../assets";
 
@@ -75,6 +93,22 @@ const services = [
 
 const technologies = [
   {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "C#",
+    icon: csharp,
+  },
+  {
+    name: "C++",
+    icon: cpp,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
     name: "HTML 5",
     icon: html,
   },
@@ -83,58 +117,55 @@ const technologies = [
     icon: css,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
     name: "Three JS",
-    icon: threejs,
+    icon: threejs_inverted,
+  },
+  {
+    name: "Flutter",
+    icon: flutter,
+  },
+  {
+    name: "Dart",
+    icon: dart,
+  },
+  {
+    name: "Unity",
+    icon: unity3d,
+  },
+  {
+    name: "Unreal Engine",
+    icon: unreal_engine_inverted,
+  },
+  {
+    name: "Postman",
+    icon: postman,
   },
   {
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Software Engineer Intern",
+    company_name: "Vizzario",
+    icon: vizzario,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "September 2022 - Present",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "XR Developer Intern",
+    company_name: "Big River Steel",
+    icon: big_river_steel,
+    iconBg: "#E6DEDD",
+    date: "June 2023 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -144,23 +175,10 @@ const experiences = [
   },
   {
     title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    company_name: "VR Developer & Research Intern",
+    icon: stanford_med_school,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "March 2022 - June 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -169,11 +187,11 @@ const experiences = [
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "VR Developer & Research Assistant",
+    company_name: "Stanford Social and Learning Lab",
+    icon: stanford,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Jan 2022 - June 2022",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
