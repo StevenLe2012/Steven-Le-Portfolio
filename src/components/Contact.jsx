@@ -1,13 +1,47 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas, RobotCanvas } from "./canvas";
+import { RobotCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { useBackgroundContext } from "../utils/background";
+import { gsap, ScrollTrigger} from "gsap/all";
 
 const Contact = () => {
+  const {setCurrentBG} = useBackgroundContext()
+  const contactRef = useRef(null)
+  const textRef = useRef(null)
+
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: contactRef.current,
+        start: "+=200 70%",
+        end: "+=00 60%",
+        scrub: true,
+        pinSpacing: false,
+        onEnter: () => {
+          setCurrentBG('#080e88');
+          gsap.to(textRef.current, {
+            color: '#282828',
+            duration: 1
+          })
+        },
+        onLeaveBack: () => {
+          setCurrentBG('#1e0a55');
+          gsap.to(textRef.current, {
+            duration: 1
+          })
+        }
+      }
+    })
+  }, [])
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -66,6 +100,7 @@ const Contact = () => {
 
   return (
     <div
+      ref={contactRef}
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
       <motion.div

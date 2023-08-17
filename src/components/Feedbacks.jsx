@@ -1,5 +1,8 @@
 import React from "react";
+// import {useRef, useEffect} from "react";
 import { motion } from "framer-motion";
+// import { useBackgroundContext } from '../utils/background.jsx'
+// import { gsap, ScrollTrigger} from "gsap/all";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
@@ -44,6 +47,29 @@ const FeedbackCard = ({
 );
 
 const Feedbacks = () => {
+  // const {setCurrentBG} = useBackgroundContext()
+  // const testRef = useRef(null)
+
+
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+
+  //   gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: testRef.current,
+  //       start: "+=200 70%",
+  //       end: "+=00 60%",
+  //       scrub: true,
+  //       pinSpacing: false,
+  //       onEnter: () => {
+  //         setCurrentBG('#1e0a55');
+  //       },
+  //       onLeaveBack: () => {
+  //         setCurrentBG('#1e0a55');
+  //       }
+  //     }
+  //   })
+  // }, [])
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
       <div
