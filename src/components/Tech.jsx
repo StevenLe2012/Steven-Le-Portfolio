@@ -14,7 +14,7 @@ const Tech = () => {
         <p className={`${styles.sectionSubText} text-center`}>
           My Tools
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 className={`${styles.sectionHeadText} text-center`} alt="My Skills, Technologies, and Tech Stack">
           Technologies
         </h2>
       </motion.div>
@@ -28,7 +28,7 @@ const Tech = () => {
             <Tilt className='xs:w-[115px] w-full'>
               <div className='w-28 h-27 p-[2px] green-pink-gradient rounded-full' style={{ transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)' }}>
                 <div class="bg-tertiary rounded-full py-5 flex justify-evenly items-center flex-col">
-                    <img src={technology.icon} class="w-16 h-16 object-contain" />
+                    <img src={technology.icon} class="w-16 h-16 object-contain" alt={technology.name}/>
                 </div>
               </div>
             </Tilt>

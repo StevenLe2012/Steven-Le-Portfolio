@@ -46,6 +46,7 @@ import {
   unreal_engine_inverted,
   postman,
   threejs_inverted,
+  mindscape_vr
 
 } from "../assets";
 
@@ -230,25 +231,38 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Mindscape VR",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Award-winning meditative and therapeutic VR experience at the Metaverse Creators Hackathon using OpenAI’s ChatGPT and Meta’s Wit.AI. By using immersive technology, we can increase the effectiveness of how we treat real-life issues such as mental health disorders and other psychological conditions",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
+        name: "Unity",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "C#",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "VR",
+        color: "green-text-gradient",
+      },
+      {
+        name: "OpenAI",
         color: "pink-text-gradient",
       },
+      {
+        name: "Wit.AI",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Oculus Speech SDK",
+        color: "pink-text-gradient",
+      }
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: mindscape_vr,
+    source_code_link: "https://github.com/StevenLe2012/metaverse-creators-hackathon-23",
+    youtube_demo_link: "https://youtu.be/IRxQi7047UI",
   },
   {
     name: "Job IT",

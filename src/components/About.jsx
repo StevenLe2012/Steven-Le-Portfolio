@@ -55,9 +55,6 @@ const About = () => {
         end: "+=00 60%",
         scrub: true,
         pinSpacing: false,
-        // #050816 = blue
-        // #1e0a55 = purple
-        // #282828 = black
         onEnter: () => {
           setCurrentBG('#1e0a55');
           gsap.to(textRef.current, {

@@ -29,6 +29,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import youtube from "./logo/youtube.png";
 import github from "./logo/github.png";
 import linkedin from "./logo/linkedin.png";
 import outlook from "./logo/outlook.png";
@@ -61,6 +62,8 @@ import unreal_engine_inverted from "./tech/unreal_engine_inverted.png";
 import postman from "./tech/postman.png";
 import threejs_inverted from "./tech/threejs_inverted.png";
 
+import mindscape_vr from "./projects/MindscapeVR.png";
+
 
 export {
   logo,
@@ -90,6 +93,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  youtube,
   github,
   linkedin,
   outlook,
@@ -118,4 +122,5 @@ export {
   unreal_engine_inverted,
   postman,
   threejs_inverted,
+  mindscape_vr,
 };
