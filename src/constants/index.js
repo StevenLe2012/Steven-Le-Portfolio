@@ -117,16 +117,16 @@ const technologies = [
     icon: css,
   },
   {
+    name: "React",
+    icon: reactjs,
+  },
+  {
     name: "Three JS",
     icon: threejs_inverted,
   },
   {
     name: "Flutter",
     icon: flutter,
-  },
-  {
-    name: "Dart",
-    icon: dart,
   },
   {
     name: "Unity",
@@ -137,8 +137,8 @@ const technologies = [
     icon: unreal_engine_inverted,
   },
   {
-    name: "Postman",
-    icon: postman,
+    name: "Blender",
+    icon: blender,
   },
   {
     name: "git",
