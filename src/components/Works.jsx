@@ -3,16 +3,17 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github, youtube } from "../assets";
+import { github, live_logo, youtube, live_logo_inverted } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 
-const GetLinkButtons = ({ source_code_link = null, youtube_demo_link = null }) => {
+const GetLinkButtons = ({ source_code_link = null, youtube_demo_link = null, live_link = null }) => {
   const links = [
     { link: source_code_link, alt: 'github source code', icon: github },
     { link: youtube_demo_link, alt: 'youtube demo', icon: youtube },
+    { link: live_link, alt: 'live demo', icon: live_logo_inverted}
   ];
 
   return (
@@ -40,6 +41,7 @@ const ProjectCard = ({
   image,
   source_code_link,
   youtube_demo_link,
+  live_link
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -58,7 +60,7 @@ const ProjectCard = ({
             className='w-full h-full object-cover rounded-2xl'
           />
 
-          <GetLinkButtons source_code_link={source_code_link} youtube_demo_link={youtube_demo_link} />
+          <GetLinkButtons source_code_link={source_code_link} youtube_demo_link={youtube_demo_link} live_link={live_link} />
             
         </div>
 

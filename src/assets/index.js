@@ -62,7 +62,13 @@ import unreal_engine_inverted from "./tech/unreal_engine_inverted.png";
 import postman from "./tech/postman.png";
 import threejs_inverted from "./tech/threejs_inverted.png";
 
+import live_logo from "./projects/live_logo.png";
+import live_logo_inverted from "./projects/live_logo_inverted.png"
 import mindscape_vr from "./projects/MindscapeVR.png";
+import pen_is_mightier from "./projects/The_Pen_Is_Mightier_Than_The_Sword.png"
+import mind_tutor from "./projects/MindTutor.png"
+import cyber_orange from "./projects/CyberOrange.png"
+import blood_divers from "./projects/BloodDivers.jpg"
 
 
 export {
@@ -123,4 +129,10 @@ export {
   postman,
   threejs_inverted,
   mindscape_vr,
+  pen_is_mightier,
+  mind_tutor,
+  live_logo,
+  live_logo_inverted,
+  cyber_orange,
+  blood_divers,
 };
