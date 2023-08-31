@@ -76,8 +76,7 @@ const About = () => {
       <div ref={aboutRef}>
         <motion.div variants={textVariant()}>
           <div variants={textVariant()}>
-            <p className={styles.sectionSubText}>Introduction</p>
-            <h2 className={styles.sectionHeadText}>Overview.</h2>
+            <h2 className={styles.sectionHeadText}>Hey, I'm Steven!</h2>
           </div>
         </motion.div>
 
@@ -92,7 +91,7 @@ const About = () => {
             {/* Left Column */}
             <div className="flex flex-col items-center min-[1000px]:items-start">
               <p className="mt-4 text-secondary text-[17px] min-[1000px]:max-w-lg w-full leading-[30px]" style={{ textAlign: 'justify' }}>
-                Hey there! I'm Steven, a Junior studying Computer Science at
+                I'm a Junior studying Computer Science at
                 Stanford University set to graduate with both a Bachelor's and Master's
                 by June 2025. I'm currently searching for Summer 2024 SWE or XR development internships.
                 <br /> <br />

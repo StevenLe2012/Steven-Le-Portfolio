@@ -160,10 +160,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "September 2022 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Led the development of an open-source, low-code developer tool for the Stanford Human Perception Lab to automate Vizzario API calls, simplifying deployment from over 300+ lines of code to one function call.",
+      "Integrated the Unity Package SDK with well-documented code in 5 enterprise applications.",
+      "Continuous Integration/Deployment Pipeline Integration, pull requests, code reviews, end-to-end testing.",
     ],
   },
   {
@@ -171,25 +170,23 @@ const experiences = [
     company_name: "Big River Steel",
     icon: big_river_steel,
     iconBg: "#E6DEDD",
-    date: "June 2023 - Present",
+    date: "June 2023 - September 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Pioneered XR integration with Hololens 2 in the steel industry, redefining data center infrastructure management through hardware-software synergy and driving $2.6 billion in annual revenue.",
+      "Created AR-enhanced remote assist with VMWare APIs, boosting data center monitoring by 60%.",
+      "Dynamized remote-assist (Image/Speech Recognition) by 80%, leveraging Azure Cognitive Services.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "VR Developer & Research Intern",
+    title: "VR Developer & Research Intern",
+    company_name: "Stanford Human Perception Lab",
     icon: stanford_med_school,
     iconBg: "#383E56",
     date: "March 2022 - June 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed a VR branching narrative game using C# in Unity3D to passively screen for ADHD by recording biometric data with the HTC Vive Pro Eyes, estimated to increase ADHD screening sensitivity by 10%.",
+      "Implemented real-world selective-attention tasks in VR and interactable UI/UX with Tobii eye tracking.",
+      "Showcased product and poster presentation to over 100 researchers at two separate conferences.",
     ],
   },
   {
@@ -199,10 +196,8 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2022 - June 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Led the development of a new experiment to simulate a real-world psychology study in VR using Python and the object-centric simulation environment iGibson, doubling the amount of data collected per subject.",
+      "Increased pilot participant studies by 65% and coded received data using Datavyu to measure how humans think and behave in embodied, interactive virtual reality.",
     ],
   },
 ];
@@ -263,6 +258,10 @@ const projects = [
       {
         name: "Oculus Speech SDK",
         color: "pink-text-gradient",
+      },
+      {
+        name: "Mental Health",
+        color: "green-text-gradient",
       }
     ],
     image: mindscape_vr,
@@ -381,7 +380,7 @@ const projects = [
   {
     name: "Personal Website",
     description:
-      "Welcome to my website! This is my first project using ThreeJS and React. I want to give special thanks to JavaScript Mastery for the ThreeJS template, which I heavily modified liking, picking up both ThreeJS and React quickly. I also added unique features like the magical particles effect by Eli Shmerler and animated robot by Hadrien59. I hope you learned a lot about me!",
+      "Welcome to my website! This is my first project using ThreeJS and React. I want to give special thanks to JavaScript Mastery for the ThreeJS template, which I heavily modified to my liking. I also modified the magical particles effect by Eli Shmerler to fit my website, learning about vertex and fragment shaders along the way. Hope you all enjoyed and learned a lot about me!",
     tags: [
       {
         name: "ThreeJS",
@@ -419,7 +418,7 @@ const projects = [
   {
     name: "Cyber Orange",
     description:
-      "Newspaper website that allows journalists to inform 3000+ people during COVID-19. Mentored a new developer to continue updating the site.",
+      "Newspaper website that allows journalists to inform 3000+ people during the height of COVID-19. This website revived the Orange Juice Newspaper Club, allowing 15+ journalist to continue writing about world events and keeping the community informed during a major time in need. I also mentored a new developer to continue updating the website.",
     tags: [
       {
         name: "HTML",
@@ -433,6 +432,10 @@ const projects = [
       {
         name: "JavaScript",
         color: "blue-text-gradient",
+      },
+      {
+        name: "Educational",
+        color: "pink-text-gradient",
       },
     ],
     image: cyber_orange,

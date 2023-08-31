@@ -10,10 +10,7 @@ import { motion } from "framer-motion";
 const Tech = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          My Tools
-        </p>
+      <motion.div variants={textVariant()} className="pb-5">
         <h2 className={`${styles.sectionHeadText} text-center`} alt="My Skills, Technologies, and Tech Stack">
           Technologies
         </h2>

@@ -100,8 +100,11 @@ class CreateParticles {
 		this.buttom = false;
 
 		this.data = {
-
-			text: "Hi, I'm Steven\nXR Enthusiast\n@ Stanford",
+			// text: "Hi, I'm Steven\nXR Developor\n@ Stanford",
+			// text: "Hi, I'm Steven\nXR Enthusiast\n@ Stanford",
+			// text: "Hi, I'm Steven.\n    XR & SWE\n  @ Stanford",
+			text: "Let's Immerse\n  With Steven",
+			// text: "",
 			amount: 400,
 			particleSize: 1,
 			particleColor: 0xffffff,
