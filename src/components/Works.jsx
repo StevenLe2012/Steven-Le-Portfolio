@@ -24,9 +24,15 @@ const GetLinkButtons = ({ source_code_link = null, youtube_demo_link = null, liv
           <div
             key={link.alt}
             onClick={() => window.open(link.link, '_blank')}
-            className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+            
           >
-            <img src={link.icon} alt={link.alt} className='w-1/2 h-1/2 object-contain' />
+            <Tilt
+              options={{max: 45,
+              scale: 1.15,
+              speed: 450,
+              }} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
+                <img src={link.icon} alt={link.alt} className='w-3/4 h-3/4 object-contain' />
+              </Tilt>
           </div>
         ))}
     </div>

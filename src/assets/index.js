@@ -46,6 +46,8 @@ import vizzario from "./company/vizzario.png";
 import stanford from "./company/stanford.png";
 import stanford_med_school from "./company/stanford_med_school.png";
 import big_river_steel from "./company/big_river_steel.png";
+import altmind from "./company/altmind.png";
+import vhil from "./company/vhil.png";
 
 import api from "./tech/api.png";
 import blender from "./tech/blender.png";
@@ -114,6 +116,8 @@ export {
   stanford,
   stanford_med_school,
   big_river_steel,
+  altmind,
+  vhil,
   api,
   blender,
   firebase,
