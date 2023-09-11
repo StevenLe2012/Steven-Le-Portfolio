@@ -16,6 +16,16 @@ export const textVariant = (delay) => {
   };
 };
 
+export const textVariantMobile = (isMobile, delay) => {
+  if (isMobile) {
+    console.log("isMobile")
+    return "";
+  } else {
+    console.log("isNotMobile")
+    return textVariant(delay);
+  }
+};
+
 export const fadeIn = (direction, type, delay, duration) => {
   return {
     hidden: {
@@ -35,6 +45,14 @@ export const fadeIn = (direction, type, delay, duration) => {
       },
     },
   };
+};
+
+export const fadeInMobile = (isMobile, direction, type, delay, duration) => {
+  if (isMobile) {
+    return "";
+  } else {
+    return fadeIn(direction, type, delay, duration);
+  }
 };
 
 export const zoomIn = (delay, duration) => {

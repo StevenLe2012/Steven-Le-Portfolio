@@ -6,7 +6,7 @@ import { styles } from "../styles";
 import { github, live_logo, youtube, live_logo_inverted } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, textVariant, textVariantMobile, fadeInMobile } from "../utils/motion";
 
 
 
@@ -98,13 +98,13 @@ const Works = () => {
   
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariantMobile(isMobile)}>
         <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
       </motion.div>
 
       <div className='w-full flex'>
         <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
+          variants={fadeInMobile(isMobile, "", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           <b>Users are my first priority.</b> Every app I make, I ensure quality user experience.
@@ -119,7 +119,7 @@ const Works = () => {
           {isMobile ? (
             <ProjectCard index={index} {...project} />
           ) : (
-            <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+            <motion.div variants={fadeInMobile(isMobile, "up", "spring", index * 0.5, 0.75)}>
               <ProjectCard index={index} {...project} />
             </motion.div>
           )}
