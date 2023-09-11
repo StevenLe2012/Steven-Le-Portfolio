@@ -52,6 +52,8 @@ import {
   cyber_orange,
   blood_divers,
   me,
+  altmind,
+  vhil,
 
 } from "../assets";
 
@@ -178,6 +180,18 @@ const experiences = [
     ],
   },
   {
+    title: "XR Developer Intern",
+    company_name: "AltMind",
+    icon: altmind,
+    iconBg: "#E6DEDD",
+    date: "June 2023 - September 2023",
+    points: [
+      "Developed and published a therapeutic XR experience that facilitates diaphragmatic breathing, increasing tidal volume by 10.96%.",
+      "Designed a proprietary algorithm to track and adapt the user's breathing pattern to gameplay, personalizing user experience.",
+      "Implemented seamless functionality across all XR platforms, including Apple Vision Pro."
+    ],
+  },
+  {
     title: "VR Developer & Research Intern",
     company_name: "Stanford Human Perception Lab",
     icon: stanford_med_school,
@@ -198,6 +212,16 @@ const experiences = [
     points: [
       "Led the development of a new experiment to simulate a real-world psychology study in VR using Python and the object-centric simulation environment iGibson, doubling the amount of data collected per subject.",
       "Increased pilot participant studies by 65% and coded received data using Datavyu to measure how humans think and behave in embodied, interactive virtual reality.",
+    ],
+  },
+  {
+    title: "VR Intensive Training Seminar",
+    company_name: "Virtual Human Interaction Lab",
+    icon: vhil,
+    iconBg: "#383E56",
+    date: "Not Yet Started",
+    points: [
+      "Selected to participate in a year-long intensive training seminar to learn about the latest VR research and development at Stanford University.",
     ],
   },
 ];

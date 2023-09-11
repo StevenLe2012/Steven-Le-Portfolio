@@ -11,7 +11,7 @@ import { fadeIn, textVariant, zoomIn } from "../utils/motion";
 import { me, github, linkedin, outlook, resume } from "../assets"
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <div className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -35,7 +35,7 @@ const ServiceCard = ({ index, title, icon }) => (
         </h3>
       </div>
     </motion.div>
-  </Tilt>
+  </div>
 );
 
 const About = () => {
@@ -115,8 +115,8 @@ const About = () => {
             >
             {/* Right Column */}
             {/* Photo */}
-            <Tilt className="xs:w-[350px] xs:h-[350px] w-full h-full m-auto max-[1000px]:my-14">
-              <div className="xs:w-[375px] w-full green-pink-gradient p-[2px] rounded-[100px] shadow-card">
+            <div className="xs:w-[350px] xs:h-[350px] w-full h-full m-auto max-[1000px]:my-14">
+              <div className="xs:w-[375px] w-full green-pink-gradient p-[4px] rounded-[20px] shadow-card">
                 <div className="bg-tertiary rounded-[20px] min-h-[250px] flex justify-evenly items-center flex-col overflow-hidden">
                   <img
                     src={me}
@@ -125,13 +125,13 @@ const About = () => {
                   />
                 </div>
               </div>
-            </Tilt>
+            </div>
             </motion.p>
           </div>
 
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className='flex mt-6 gap-5'
+            className='flex mt-6 gap-5 flex-wrap justify-center sm:justify-start'
           >
             {/* LinkedIn Button */}
             <Tilt className="h-full max-[1000px]:my-14">
@@ -160,7 +160,7 @@ const About = () => {
             {/* Outlook Button */}
             <Tilt className="h-full max-[1000px]:my-14">
               <div class="green-pink-gradient p-[1px] rounded-full flex justify-center items-center cursor-pointer mt-4 select-none">
-                <a href="https://github.com/StevenLe2012" target="_blank" rel="noopener noreferrer" >
+                <a href="mailto:stevenle@stanford.edu" target="_blank" rel="noopener noreferrer" >
                   <div class="bg-tertiary rounded-full px-3 py-2 flex justify-evenly items-center">
                       <img src={outlook} alt="Outlook Logo" class="w-[40px] h-[40px] object-contain" />
                       <p class="text-[21px]">Email</p>
@@ -169,15 +169,15 @@ const About = () => {
               </div>
             </Tilt>
 
-          {/* Resume */}
-          <Tilt className="h-full max-[1000px]:my-14">
-            <div class="green-pink-gradient p-[1px] rounded-full flex justify-center items-center cursor-pointer mt-4 select-none">
-                <a href={resume} title="Steven Le Resume" download className="py-3 px-8 rounded-xl outline-none text-white font-bold z-10">
-                  <span className="hidden sm:inline">Download</span> Resume
-                </a>
-            </div>
-          </Tilt>
-        </motion.p>
+            {/* Resume */}
+            <Tilt className="h-full max-[1000px]:my-14">
+              <div class="green-pink-gradient p-[1px] rounded-full flex justify-center items-center cursor-pointer mt-4 select-none">
+                  <a href={resume} title="Steven Le Resume" download className="py-3 px-8 rounded-xl outline-none text-white font-bold z-10">
+                    <span className="hidden sm:inline">Download</span> Resume
+                  </a>
+              </div>
+            </Tilt>
+          </motion.p>
           
 
         <div className="mt-20 flex flex-wrap gap-10 justify-center">
