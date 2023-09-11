@@ -34,7 +34,7 @@ import github from "./logo/github.png";
 import linkedin from "./logo/linkedin.png";
 import outlook from "./logo/outlook.png";
 import me from "./personal/steven_photo.jpg";
-import resume from "./personal/Le_Steven_Resume.pdf";
+import resume from "./personal/Steven_Le_Resume.pdf";
 
 import vr from "./skills/Futuristic VR Headset.png";
 import unity from "./logo/unity.png"

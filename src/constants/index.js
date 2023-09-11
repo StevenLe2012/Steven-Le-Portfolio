@@ -54,6 +54,9 @@ import {
   me,
   altmind,
   vhil,
+  linkedin,
+  github,
+  outlook,
 
 } from "../assets";
 
@@ -78,6 +81,24 @@ export const navLinks = [
     id: "resume",
     title: "Download Resume",
   }
+];
+
+export const navMedia = [
+  {
+    id: "LinkedIn",
+    image: linkedin,
+    link: "https://www.linkedin.com/in/stevenle1337/",
+  },
+  {
+    id: "GitHub",
+    image: github,
+    link: "https://github.com/StevenLe2012",
+  },
+  {
+    id: "Email",
+    image: outlook,
+    link: "mailto:stevenle@stanford.edu",
+  },
 ];
 
 const services = [
