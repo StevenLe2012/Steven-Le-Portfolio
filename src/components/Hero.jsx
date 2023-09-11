@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
         </div> */}
         <div className="w-fit mx-auto flex items-center justify-center gap-6 bg-tertiary lg:px-7 lg:py-3 px-4 py-2 rounded-xl lg:mt-10 mt-5 max-[350px]:hidden select-none">
-          <p>Try Clicking!</p>
+          <p>Try Clicking Screen!</p>
         </div>
 
 
