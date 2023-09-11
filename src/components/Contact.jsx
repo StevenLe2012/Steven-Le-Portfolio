@@ -69,10 +69,8 @@ const Contact = () => {
       .send(
         // import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         process.env.VITE_APP_EMAILJS_SERVICE_ID,
-        // "service_u0dflvh",
         // import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         process.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        // "template_ihxjroj",
         {
           from_name: form.name,
           to_name: "Steven Le",
@@ -82,7 +80,6 @@ const Contact = () => {
         },
         // import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
         process.env.VITE_APP_EMAILJS_PUBLIC_KEY
-        // "LCOrdCVKPnNTsFKU5"
       )
       .then(
         () => {
