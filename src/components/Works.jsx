@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -7,6 +7,7 @@ import { github, live_logo, youtube, live_logo_inverted } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+
 
 
 const GetLinkButtons = ({ source_code_link = null, youtube_demo_link = null, live_link = null }) => {
@@ -26,20 +27,22 @@ const GetLinkButtons = ({ source_code_link = null, youtube_demo_link = null, liv
             onClick={() => window.open(link.link, '_blank')}
             
           >
-            {/* <Tilt
+            <Tilt
               options={{max: 45,
               scale: 1.15,
               speed: 450,
-              }} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'> */}
+              }} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
               <div className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
                 <img src={link.icon} alt={link.alt} className='w-3/4 h-3/4 object-contain' />
               </div>
-              {/* </Tilt> */}
+              </Tilt>
           </div>
         ))}
     </div>
   );
 };
+
+
 
 const ProjectCard = ({
   index,
@@ -52,15 +55,6 @@ const ProjectCard = ({
   live_link
 }) => {
   return (
-    <motion.div>
-      {/* <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-      > */}
       <div className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
         <div className='relative w-full h-[230px]'>
           <img
@@ -88,13 +82,20 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      {/* </Tilt> */}
       </div>
-    </motion.div>
   );
 };
 
 const Works = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
+    setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+  }, []);
+
+
+  
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -114,8 +115,16 @@ const Works = () => {
 
       <div className='mt-20 flex flex-wrap gap-7'>
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+          <div>
+          {isMobile ? (
+            <ProjectCard index={index} {...project} />
+          ) : (
+            <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+              <ProjectCard index={index} {...project} />
+            </motion.div>
+          )}
+        </div>
+      ))}
       </div>
     </>
   );
