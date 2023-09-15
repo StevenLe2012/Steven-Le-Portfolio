@@ -423,6 +423,33 @@ const projects = [
     youtube_demo_link: "https://youtu.be/zH3GdwHmTME?si=47otebHoApIe-zwb",
   },
   {
+    name: "Cyber Orange",
+    description:
+      "Newspaper website that allows journalists to inform 3000+ people during the height of COVID-19. This website revived the Orange Juice Newspaper Club, allowing 15+ journalist to continue writing about world events and keeping the community informed during a major time in need. I also mentored a new developer to continue updating the website.",
+    tags: [
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+
+      },
+      {
+        name: "CSS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Educational",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: cyber_orange,
+    source_code_link: "https://github.com/StevenLe2012/CyberOrange",
+    live_link: "https://orangejuicenew.github.io/CyberOrange-master/",
+  },
+  {
     name: "Personal Website",
     description:
       "Welcome to my website! This is my first project using ThreeJS and React. I want to give special thanks to JavaScript Mastery for the ThreeJS template, which I heavily modified to my liking. I also modified the magical particles effect by Eli Shmerler to fit my website, learning about vertex and fragment shaders along the way. Hope you all enjoyed and learned a lot about me!",
@@ -458,34 +485,7 @@ const projects = [
     ],
     image: me,
     source_code_link: "https://github.com/StevenLe2012/Steven-Le-Portfolio",
-    live_link: "https://vercel.com/",
-  },
-  {
-    name: "Cyber Orange",
-    description:
-      "Newspaper website that allows journalists to inform 3000+ people during the height of COVID-19. This website revived the Orange Juice Newspaper Club, allowing 15+ journalist to continue writing about world events and keeping the community informed during a major time in need. I also mentored a new developer to continue updating the website.",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-
-      },
-      {
-        name: "CSS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Educational",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: cyber_orange,
-    source_code_link: "https://github.com/StevenLe2012/CyberOrange",
-    live_link: "https://orangejuicenew.github.io/CyberOrange-master/",
+    live_link: "https://www.stevenlexr.com/",
   },
 ];
 
