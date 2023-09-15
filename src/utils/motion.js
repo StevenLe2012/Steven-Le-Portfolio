@@ -16,7 +16,8 @@ export const textVariant = (delay) => {
   };
 };
 
-export const textVariantDevice = (isDesktop, delay) => {
+export const textVariantDevice = (delay) => {
+  const isDesktop = window.innerWidth >= 600;
   if (isDesktop) {
     console.log("Text: isDesktop")
     return textVariant(delay);
@@ -47,7 +48,8 @@ export const fadeIn = (direction, type, delay, duration) => {
   };
 };
 
-export const fadeInDevice = (isDesktop, direction, type, delay, duration) => {
+export const fadeInDevice = (direction, type, delay, duration) => {
+  const isDesktop = window.innerWidth >= 600;
   if (isDesktop) {
     console.log("Fade In: isDesktop")
     return {
