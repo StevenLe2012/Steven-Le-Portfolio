@@ -1,12 +1,14 @@
-import {React, useState, useEffect} from "react";
+import {React, useState, useEffect, useLayoutEffect} from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
+// import { useMediaQuery } from "@material-ui/core";
+import { useMediaQuery } from "react-responsive";
 
 import { styles } from "../styles";
 import { github, live_logo, youtube, live_logo_inverted } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant, textVariantMobile, fadeInMobile } from "../utils/motion";
+import { fadeIn, textVariant, textVariantDevice, fadeInDevice } from "../utils/motion";
 
 
 
@@ -87,24 +89,37 @@ const ProjectCard = ({
 };
 
 const Works = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const userAgent = navigator.userAgent;
-    setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
-  }, []);
+  // useEffect(() => {
+  //   const userAgent = navigator.userAgent;
+  //   setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+  // }, []);
+
+  // const isDesktop = useMediaQuery("(min-width:600px)");
+
+
+  const IsDesktop = () => {
+    const isDesktop = useMediaQuery({ query: "(min-width: 600px)" });
+    if (isDesktop) {
+      return true;
+    }
+    return false;
+  };
+
+  const isDesktop = IsDesktop();
 
 
   
   return (
     <>
-      <motion.div variants={textVariantMobile(isMobile)}>
+      <motion.div variants={textVariantDevice(isDesktop)}>
         <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
       </motion.div>
 
       <div className='w-full flex'>
         <motion.p
-          variants={fadeInMobile(isMobile, "", "", 0.1, 1)}
+          variants={fadeInDevice(isDesktop, "", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           <b>Users are my first priority.</b> Every app I make, I ensure quality user experience.
@@ -115,15 +130,18 @@ const Works = () => {
 
       <div className='mt-20 flex flex-wrap gap-7'>
         {projects.map((project, index) => (
-          <div>
-          {isMobile ? (
-            <ProjectCard index={index} {...project} />
-          ) : (
-            <motion.div variants={fadeInMobile(isMobile, "up", "spring", index * 0.5, 0.75)}>
-              <ProjectCard index={index} {...project} />
-            </motion.div>
-          )}
-        </div>
+        //   <div>
+        //   {isDesktop ? (
+        //     <ProjectCard index={index} {...project} />
+        //   ) : (
+        //     <motion.div variants={fadeInDevice(isDesktop, "up", "spring", index * 0.5, 0.75)}>
+        //       <ProjectCard index={index} {...project} />
+        //     </motion.div>
+        //   )}
+        // </div>
+        <motion.div variants={fadeInDevice(isDesktop, "up", "spring", index * 0.5, 0.75)}>
+          <ProjectCard index={index} {...project} />
+        </motion.div>
       ))}
       </div>
     </>

@@ -16,13 +16,13 @@ export const textVariant = (delay) => {
   };
 };
 
-export const textVariantMobile = (isMobile, delay) => {
-  if (isMobile) {
-    console.log("isMobile")
-    return "";
-  } else {
-    console.log("isNotMobile")
+export const textVariantDevice = (isDesktop, delay) => {
+  if (isDesktop) {
+    console.log("Text: isDesktop")
     return textVariant(delay);
+  } else {
+    console.log("Text: isMobile")
+    return "";
   }
 };
 
@@ -47,11 +47,30 @@ export const fadeIn = (direction, type, delay, duration) => {
   };
 };
 
-export const fadeInMobile = (isMobile, direction, type, delay, duration) => {
-  if (isMobile) {
-    return "";
+export const fadeInDevice = (isDesktop, direction, type, delay, duration) => {
+  if (isDesktop) {
+    console.log("Fade In: isDesktop")
+    return {
+      hidden: {
+        x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
+        y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+        opacity: 0,
+      },
+      show: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: type,
+          delay: delay,
+          duration: duration,
+          ease: "easeOut",
+        },
+      },
+    };
   } else {
-    return fadeIn(direction, type, delay, duration);
+    console.log("Fade In: isMobile")
+    return "";
   }
 };
 
