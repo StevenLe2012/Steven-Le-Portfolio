@@ -1,14 +1,12 @@
-import {React, useState, useEffect, useLayoutEffect} from "react";
+import {React} from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
-// import { useMediaQuery } from "@material-ui/core";
-import { useMediaQuery } from "react-responsive";
 
 import { styles } from "../styles";
 import { github, live_logo, youtube, live_logo_inverted } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant, textVariantDevice, fadeInDevice } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
 
 
