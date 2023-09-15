@@ -99,27 +99,27 @@ const Works = () => {
   // const isDesktop = useMediaQuery("(min-width:600px)");
 
 
-  const IsDesktop = () => {
-    const isDesktop = useMediaQuery({ query: "(min-width: 600px)" });
-    if (isDesktop) {
-      return true;
-    }
-    return false;
-  };
+  // const IsDesktop = () => {
+  //   const isDesktop = useMediaQuery({ query: "(min-width: 600px)" });
+  //   if (isDesktop) {
+  //     return true;
+  //   }
+  //   return false;
+  // };
 
-  const isDesktop = IsDesktop();
+  // const isDesktop = IsDesktop();
 
 
   
   return (
     <>
-      <motion.div variants={textVariantDevice()}>
+      <motion.div variants={textVariant()}>
         <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
       </motion.div>
 
       <div className='w-full flex'>
         <motion.p
-          variants={fadeInDevice("", "", 0.1, 1)}
+          variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           <b>Users are my first priority.</b> Every app I make, I ensure quality user experience.
@@ -139,7 +139,7 @@ const Works = () => {
         //     </motion.div>
         //   )}
         // </div>
-        <motion.div variants={fadeInDevice("up", "spring", index * 0.5, 0.75)}>
+        <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
           <ProjectCard index={index} {...project} />
         </motion.div>
       ))}
