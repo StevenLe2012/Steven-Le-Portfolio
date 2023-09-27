@@ -95,7 +95,7 @@ const About = () => {
                 Stanford University set to graduate with both a Bachelor's and Master's
                 by June 2025. I'm currently searching for Summer 2024 SWE or XR development internships.
                 <br /> <br />
-                With three years of experience, my diverse portfolio is a testament to
+                With two years of experience, my diverse portfolio is a testament to
                 my unquenchable curiosity and unwavering drive to ignite impactful innovation.
                 Whether it's elevating ADHD screening through immersive VR or
                 reshaping education via generative AI, I'm always in
@@ -117,7 +117,7 @@ const About = () => {
             {/* Photo */}
             <div className="xs:w-[350px] xs:h-[350px] w-full h-full m-auto max-[1000px]:my-14">
               <div className="xs:w-[375px] w-full green-pink-gradient p-[4px] rounded-[20px] shadow-card">
-                <div className="bg-tertiary rounded-[20px] min-h-[250px] flex justify-evenly items-center flex-col overflow-hidden">
+              <div className="bg-tertiary rounded-[20px] min-h-[250px] flex justify-evenly items-center flex-col overflow-hidden">
                   <img
                     src={me}
                     alt="Steven Le Profile Picture"

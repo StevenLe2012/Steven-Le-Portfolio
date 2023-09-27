@@ -57,6 +57,19 @@ import {
   linkedin,
   github,
   outlook,
+  altmind_name_logo,
+  stanfordxr,
+  apia,
+  gates,
+  questbridge,
+  wu_tsai_hpa,
+  stanford_square,
+  codepath,
+  codepath_inverted,
+  swift,
+  altmind_name,
+  altmind_inverted,
+  brs,
 
 } from "../assets";
 
@@ -154,10 +167,6 @@ const technologies = [
     icon: threejs_inverted,
   },
   {
-    name: "Flutter",
-    icon: flutter,
-  },
-  {
     name: "Unity",
     icon: unity3d,
   },
@@ -170,8 +179,12 @@ const technologies = [
     icon: blender,
   },
   {
-    name: "git",
-    icon: git,
+    name: "Swift",
+    icon: swift,
+  },
+  {
+    name: "Flutter",
+    icon: flutter,
   },
 ];
 
@@ -191,7 +204,7 @@ const experiences = [
   {
     title: "XR Developer Intern",
     company_name: "Big River Steel",
-    icon: big_river_steel,
+    icon: brs,
     iconBg: "#E6DEDD",
     date: "June 2023 - September 2023",
     points: [
@@ -203,8 +216,8 @@ const experiences = [
   {
     title: "XR Developer Intern",
     company_name: "AltMind",
-    icon: altmind,
-    iconBg: "#E6DEDD",
+    icon: altmind_inverted,
+    iconBg: "#383E56",
     date: "June 2023 - September 2023",
     points: [
       "Developed and published a therapeutic XR experience that facilitates diaphragmatic breathing, increasing tidal volume by 10.96%.",
@@ -216,7 +229,7 @@ const experiences = [
     title: "VR Developer & Research Intern",
     company_name: "Stanford Human Perception Lab",
     icon: stanford_med_school,
-    iconBg: "#383E56",
+    iconBg: "#E6DEDD",
     date: "March 2022 - June 2023",
     points: [
       "Developed a VR branching narrative game using C# in Unity3D to passively screen for ADHD by recording biometric data with the HTC Vive Pro Eyes, estimated to increase ADHD screening sensitivity by 10%.",
@@ -228,21 +241,11 @@ const experiences = [
     title: "VR Developer & Research Assistant",
     company_name: "Stanford Social and Learning Lab",
     icon: stanford,
-    iconBg: "#E6DEDD",
+    iconBg: "#383E56",
     date: "Jan 2022 - June 2022",
     points: [
       "Led the development of a new experiment to simulate a real-world psychology study in VR using Python and the object-centric simulation environment iGibson, doubling the amount of data collected per subject.",
       "Increased pilot participant studies by 65% and coded received data using Datavyu to measure how humans think and behave in embodied, interactive virtual reality.",
-    ],
-  },
-  {
-    title: "VR Intensive Training Seminar",
-    company_name: "Virtual Human Interaction Lab",
-    icon: vhil,
-    iconBg: "#383E56",
-    date: "Not Yet Started",
-    points: [
-      "Selected to participate in a year-long intensive training seminar to learn about the latest VR research and development at Stanford University.",
     ],
   },
 ];
@@ -489,4 +492,77 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const programs = [
+  {
+    company: "StanfordXR",
+    title: "Vice President of Events",
+    icon: stanfordxr,
+    date: "April 2023 - Present",
+    description: "Spearheading Stanford's inaugural nationwide XR hackathon, “Immerse The Bay,” scheduled for November 10-12, 2023. Leading team of 10+ students to organize a 400 person event with 20+ sponsors.",
+  },
+  {
+    company: "CS 11SI: Intro to VR Dev",
+    title: "Teaching Assistant",
+    icon: unity,
+    date: "September 2023 - Present",
+    description: "Teaching 30+ students VR development skills (Unity, Immersion, Narrative) twice a week. Designing curriculum, managing course logistic, and grading weekly projects.",
+  },
+  {
+    company: "Virtual Human Interaction Lab",
+    title: "VR Intensive Training Seminar",
+    icon: vhil,
+    date: "September 2023 - Present",
+    description: "Building multiplayer social-VR worlds with Unity, Normcore, Blender, and Ready Player Me avatars in a year-long VR software engineering internship.",
+  },
+  {
+    company: "Stanford University",
+    title: "Residential Assistant",
+    icon: stanford_square,
+    date: "September 2023 - Present",
+    description: "Nurturing an inclusive, safe community in my dorm to support 50+ students' health and wellbeing. Organizing events to foster a sense of belonging.",
+  },
+  {
+    company: "CodePath",
+    title: "IOS 101",
+    icon: codepath_inverted,
+    date: "September 2023 - Present",
+    description: "Currently taking Intro to iOS Development and learning Swift, Xcode, and UIKit. Goal of building completed visionOS app.",
+  },
+  {
+    company: "CodePath",
+    title: "TIP 103",
+    icon: codepath_inverted,
+    date: "2023",
+    description: "Completed Advanced Technical Interview Prep and learned data structures, algorithms, and system design.",
+  },
+  {
+    company: "APIA Scholarship Program",
+    title: "APIA Scholar",
+    icon: apia,
+    date: "2023",
+    description: "Selected as one of 40 national AAPI community student leaders to receive the McDonald’s/APIA Scholarship for excellence in academics, community service, and leadership.",
+  },
+  {
+    company: "Human Performance Alliance",
+    title: "Wu Tsai Scholar",
+    icon: wu_tsai_hpa,
+    date: "2022",
+    description: "Selected as one of 15 students conducting research in human performance. Presented VR + ADHD Screening research at the 2022 Human Perforamnce Alliance symposium to over 100 researchers.",
+  },
+  {
+    company: "The Gates Scholarship",
+    title: "Bill Gates Scholar",
+    icon: gates,
+    date: "2021",
+    description: "Selected as one of 300 students nationwide to receive a a full-ride scholarship for exceptional student leaders from low-income households (0.8% acceptance rate).",
+  },
+  {
+    company: "QuestBridge",
+    title: "College Match Scholar",
+    icon: questbridge,
+    date: "2021",
+    description: "Selected as one of 1464 students out of the 18,500 to receive a 4-year, full-ride scholarship, worth over $300,000, for low-income, first-generation, high-achieving students (7.9% acceptance rate).",
+  },
+];
+
+export { services, technologies, experiences, testimonials, projects, programs };

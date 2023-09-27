@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useBackgroundContext } from './utils/background.jsx'
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { About, Contact, Experience, Feedbacks, Programs, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 import { BsArrowUp } from 'react-icons/bs'
 
 const App = () => {
@@ -40,6 +40,7 @@ const App = () => {
         <Tech />
         <Works />
         {/* <Feedbacks /> */}
+        <Programs />
         <div className='relative z-0'>
           <Contact />
           {/* <StarsCanvas /> */}
