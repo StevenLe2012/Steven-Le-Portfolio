@@ -117,7 +117,7 @@ const About = () => {
             {/* Photo */}
             <div className="xs:w-[350px] xs:h-[350px] w-full h-full m-auto max-[1000px]:my-14">
               <div className="xs:w-[375px] w-full green-pink-gradient p-[4px] rounded-[20px] shadow-card">
-              <div className="bg-tertiary rounded-[20px] min-h-[250px] flex justify-evenly items-center flex-col overflow-hidden">
+                <div className="bg-tertiary rounded-[20px] min-h-[250px] flex justify-evenly items-center flex-col overflow-hidden">
                   <img
                     src={me}
                     alt="Steven Le Profile Picture"
@@ -172,9 +172,9 @@ const About = () => {
             {/* Resume */}
             <Tilt className="h-full max-[1000px]:my-14">
               <div class="green-pink-gradient p-[1px] rounded-full flex justify-center items-center cursor-pointer mt-4 select-none">
-                  <a href={resume} title="Steven Le Resume" download className="py-3 px-8 rounded-xl outline-none text-white font-bold z-10">
-                    <span className="hidden sm:inline">Download</span> Resume
-                  </a>
+                <a href={resume} title="Steven Le Resume" target="_blank" className="py-3 px-8 rounded-xl outline-none text-white font-bold z-10">
+                  <span className="hidden sm:inline">View</span> Resume
+                </a>
               </div>
             </Tilt>
           </motion.p>
