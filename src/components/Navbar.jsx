@@ -58,9 +58,9 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(null)}>
                 {/* Render something else for the resume link */}
-                <a href={resume} title="Steven Le Resume" download>
-                    {nav.title}
-                  </a>
+                <a href={resume} title="Steven Le Resume" target="_blank">
+                  {nav.title}
+                </a>
               </li>
             ) : (
               <li
@@ -126,7 +126,7 @@ const Navbar = () => {
                     setActive(null);
                   }}
                 >
-                  <a href={resume} title="Steven Le Resume" download>{nav.title}</a>
+                  <a href={resume} title="Steven Le Resume" target="_blank">{nav.title}</a>
                 </li>
               ) : (
                 <li

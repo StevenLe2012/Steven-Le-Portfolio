@@ -44,10 +44,22 @@ import generative_ai from "./skills/generative_ai.png"
 
 import vizzario from "./company/vizzario.png";
 import stanford from "./company/stanford.png";
+import stanford_square from "./company/stanford_square.png";
 import stanford_med_school from "./company/stanford_med_school.png";
 import big_river_steel from "./company/big_river_steel.png";
+import brs from "./company/brs.png";
 import altmind from "./company/altmind.png";
+import altmind_inverted from "./company/altmind_inverted.png";
+import altmind_name from "./company/altmind_name.png";
+import altmind_name_logo from "./company/altmind_name_logo.png";
 import vhil from "./company/vhil.png";
+import stanfordxr from "./company/stanfordxr.png";
+import apia from "./company/apia.png";
+import gates from "./company/gates.png";
+import questbridge from "./company/questbridge.png";
+import wu_tsai_hpa from "./company/wu_tsai_hpa.png";
+import codepath from "./company/codepath.png";
+import codepath_inverted from "./company/codepath_inverted.png";
 
 import api from "./tech/api.png";
 import blender from "./tech/blender.png";
@@ -63,6 +75,7 @@ import unreal_engine from "./tech/unreal_engine.png";
 import unreal_engine_inverted from "./tech/unreal_engine_inverted.png";
 import postman from "./tech/postman.png";
 import threejs_inverted from "./tech/threejs_inverted.png";
+import swift from "./tech/swift.png";
 
 import live_logo from "./projects/live_logo.png";
 import live_logo_inverted from "./projects/live_logo_inverted.png"
@@ -114,10 +127,22 @@ export {
   unity_colorful,
   vizzario,
   stanford,
+  stanford_square,
   stanford_med_school,
   big_river_steel,
+  brs,
   altmind,
+  altmind_inverted,
+  altmind_name,
+  altmind_name_logo,
   vhil,
+  stanfordxr,
+  apia,
+  gates,
+  questbridge,
+  wu_tsai_hpa,
+  codepath,
+  codepath_inverted,
   api,
   blender,
   firebase,
@@ -132,6 +157,7 @@ export {
   unreal_engine_inverted,
   postman,
   threejs_inverted,
+  swift,
   mindscape_vr,
   pen_is_mightier,
   mind_tutor,

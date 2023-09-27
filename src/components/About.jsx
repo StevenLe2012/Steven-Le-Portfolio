@@ -95,7 +95,7 @@ const About = () => {
                 Stanford University set to graduate with both a Bachelor's and Master's
                 by June 2025. I'm currently searching for Summer 2024 SWE or XR development internships.
                 <br /> <br />
-                With three years of experience, my diverse portfolio is a testament to
+                With two years of experience, my diverse portfolio is a testament to
                 my unquenchable curiosity and unwavering drive to ignite impactful innovation.
                 Whether it's elevating ADHD screening through immersive VR or
                 reshaping education via generative AI, I'm always in
@@ -172,9 +172,9 @@ const About = () => {
             {/* Resume */}
             <Tilt className="h-full max-[1000px]:my-14">
               <div class="green-pink-gradient p-[1px] rounded-full flex justify-center items-center cursor-pointer mt-4 select-none">
-                  <a href={resume} title="Steven Le Resume" download className="py-3 px-8 rounded-xl outline-none text-white font-bold z-10">
-                    <span className="hidden sm:inline">Download</span> Resume
-                  </a>
+                <a href={resume} title="Steven Le Resume" target="_blank" className="py-3 px-8 rounded-xl outline-none text-white font-bold z-10">
+                  <span className="hidden sm:inline">View</span> Resume
+                </a>
               </div>
             </Tilt>
           </motion.p>
