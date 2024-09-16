@@ -70,7 +70,9 @@ import {
   altmind_name,
   altmind_inverted,
   brs,
-
+  ashita_co,
+  ashita_co_inverted,
+  apple
 } from "../assets";
 
 export const navLinks = [
@@ -120,7 +122,7 @@ export const navMedia = [
 
 const services = [
   {
-    title: "VR/AR Developer",
+    title: "AR/VR Developer",
     icon: vr,
   },
   {
@@ -141,6 +143,10 @@ const technologies = [
   {
     name: "Python",
     icon: python,
+  },
+  {
+    name: "Swift",
+    icon: swift,
   },
   {
     name: "C#",
@@ -183,10 +189,6 @@ const technologies = [
     icon: blender,
   },
   {
-    name: "Swift",
-    icon: swift,
-  },
-  {
     name: "Flutter",
     icon: flutter,
   },
@@ -194,11 +196,34 @@ const technologies = [
 
 const experiences = [
   {
+    title: "AR/VR Software Engineer Intern",
+    company_name: "Apple",
+    icon: apple,
+    iconBg: "#383E56",
+    date: "June 2024 - September 2024",
+    points: [
+      "Developed and designed a prototype feature for visionOS (Swift, SwiftUI, ARKit, and RealityKit).",
+      "Worked extensively with cross-functional partners to maximize user experience.",
+      "Refactored codebase to be more scalable for future development.",
+    ],
+  },
+  {
+    title: "AR/VR Software Engineer",
+    company_name: "Ashita Co.",
+    icon: ashita_co,
+    iconBg: "#E6DEDD",
+    date: "March 2024 - May 2024",
+    points: [
+      "Designed and prototyped AR/VR R&D XR projects in Japan (Unity, C#).",
+      "Collaborated with cross-functional partners such as Toei Animation and Niantic to meet high-quality expectations for production.",
+    ],
+  },
+  {
     title: "Software Engineer Intern",
     company_name: "Vizzario",
     icon: vizzario,
     iconBg: "#383E56",
-    date: "September 2022 - Present",
+    date: "September 2022 - June 2024",
     points: [
       "Led the development of an open-source, low-code developer tool for the Stanford Human Perception Lab to automate Vizzario API calls, simplifying deployment from over 300+ lines of code to one function call.",
       "Integrated the Unity Package SDK with well-documented code in 5 enterprise applications.",
@@ -206,7 +231,7 @@ const experiences = [
     ],
   },
   {
-    title: "XR Developer Intern",
+    title: "AR/VR Software Engineer Intern",
     company_name: "Big River Steel",
     icon: brs,
     iconBg: "#E6DEDD",
@@ -218,7 +243,7 @@ const experiences = [
     ],
   },
   {
-    title: "XR Developer Intern",
+    title: "AR/VR Software Engineer Intern",
     company_name: "AltMind",
     icon: altmind_inverted,
     iconBg: "#383E56",
@@ -283,20 +308,20 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Mindscape VR",
+    name: "Chime",
     description:
-      "Award-winning meditative and therapeutic VR experience at the Metaverse Creators Hackathon using OpenAI’s ChatGPT and Meta’s Wit.AI. By using immersive technology, we can increase the effectiveness of how we treat real-life issues such as mental health disorders and other psychological conditions",
+      "Conversational language partner in your pocket. With both iOS and watchOS integration, users are able to practice up to 56 different languages in a natural way that integrates voice recognition, text to speech, speech to text, and AI LLM instant feedback which suggests improvement for grammar and vocabulary.",
     tags: [
       {
-        name: "Unity",
+        name: "Swift",
         color: "green-text-gradient",
       },
       {
-        name: "C#",
+        name: "SwiftUI",
         color: "blue-text-gradient",
       },
       {
-        name: "VR",
+        name: "Whisper",
         color: "green-text-gradient",
       },
       {
@@ -304,21 +329,54 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "Wit.AI",
+        name: "Python",
         color: "pink-text-gradient",
       },
       {
-        name: "Oculus Speech SDK",
+        name: "FastAPI",
         color: "pink-text-gradient",
       },
       {
-        name: "Mental Health",
-        color: "green-text-gradient",
+        name: "Heroku",
+        color: "pink-text-gradient",
       }
     ],
     image: mindscape_vr,
-    source_code_link: "https://github.com/StevenLe2012/metaverse-creators-hackathon-23",
-    youtube_demo_link: "https://youtu.be/IRxQi7047UI",
+    youtube_demo_link: "https://youtu.be/ic4jd9mJO9g?si=viFtqgPtizSPpYTt",
+  },
+  {
+    name: "Dr. Trust",
+    description:
+      "Award-winning real-time collaborative MR medical diagnosis that connects doctors, patients, and family members to increase trust in the medical field. Utilized Meta's Presence Platform to facilitate difficult medical conversations, allowing doctors to effectively educate and reassure presents by clearly visualizing what the problem is and how it can be treated.",
+    tags: [
+      {
+        name: "Unity",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Scene Understanding",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Normcore",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Multiplayer",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Bezi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Blender",
+        color: "pink-text-gradient",
+      }
+    ],
+    image: mindscape_vr,
+    source_code_link: "https://github.com/StevenLe2012/dr-trust",
+    youtube_demo_link: "https://youtu.be/b7dJazhTQVk?si=G_f5HBNsJ884bwdP",
   },
   {
     name: "Pen is Mightier",
@@ -361,12 +419,110 @@ const projects = [
         name: "VR",
         color: "green-text-gradient",
       },
-
-      
     ],
     image: pen_is_mightier,
     source_code_link: "https://github.com/StevenLe2012/ImmerseGT-Hackathon-2023",
     youtube_demo_link: "https://www.youtube.com/watch?v=D622-WeCsV0",
+  },
+  {
+    name: "Melodify",
+    description:
+      "On-the-go music streaming app that offers a comprehensive library of songs, podcasts, and playlists. It allows users to explore, discover, and enjoy a wide range of audio content from various genres and artists worldwide.",
+    tags: [
+      {
+        name: "Swift",
+        color: "green-text-gradient",
+      },
+      {
+        name: "UIKit#",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Spotify API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Social Networking",
+        color: "pink-text-gradient",
+      }
+    ],
+    image: mindscape_vr,
+    source_code_link: "https://github.com/StevenLe2012/melodify",
+  },
+  {
+    name: "PulsAR",
+    description:
+      "Apple Vision Pro meditation app that collects the user’s heart rate from their Apple Watch to provide real-time feedback on their meditation progress. Showcased major usecase of HealthKit for visionOS, which was later released by Apple.",
+    tags: [
+      {
+        name: "Swift",
+        color: "green-text-gradient",
+      },
+      {
+        name: "SwiftUI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "ARKit",
+        color: "green-text-gradient",
+      },
+      {
+        name: "RealityKit",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "FastAPI",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Heroku",
+        color: "pink-text-gradient",
+      }
+    ],
+    image: mindscape_vr,
+    youtube_demo_link: "https://youtu.be/fBKzrsaZ9uI?si=2HAulBjlyilKr3wr",
+  },
+  {
+    name: "Mindscape VR",
+    description:
+      "Award-winning meditative and therapeutic VR experience at the Metaverse Creators Hackathon using OpenAI’s ChatGPT and Meta’s Wit.AI. By using immersive technology, we can increase the effectiveness of how we treat real-life issues such as mental health disorders and other psychological conditions",
+    tags: [
+      {
+        name: "Unity",
+        color: "green-text-gradient",
+      },
+      {
+        name: "C#",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "VR",
+        color: "green-text-gradient",
+      },
+      {
+        name: "OpenAI",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Wit.AI",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Oculus Speech SDK",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Mental Health",
+        color: "green-text-gradient",
+      }
+    ],
+    image: mindscape_vr,
+    source_code_link: "https://github.com/StevenLe2012/metaverse-creators-hackathon-23",
+    youtube_demo_link: "https://youtu.be/IRxQi7047UI",
   },
   {
     name: "Mind Tutor",
@@ -505,20 +661,6 @@ const programs = [
     description: "Spearheading Stanford's inaugural nationwide XR hackathon, “Immerse The Bay,” scheduled for November 10-12, 2023. Leading team of 10+ students to organize a 400 person event with 20+ sponsors.",
   },
   {
-    company: "CS 11SI: Intro to VR Dev",
-    title: "Teaching Assistant",
-    icon: unity,
-    date: "September 2023 - Present",
-    description: "Teaching 30+ students VR development skills (Unity, Immersion, Narrative) twice a week. Designing curriculum, managing course logistic, and grading weekly projects.",
-  },
-  {
-    company: "Virtual Human Interaction Lab",
-    title: "VR Intensive Training Seminar",
-    icon: vhil,
-    date: "September 2023 - Present",
-    description: "Building multiplayer social-VR worlds with Unity, Normcore, Blender, and Ready Player Me avatars in a year-long VR software engineering internship.",
-  },
-  {
     company: "Stanford University",
     title: "Residential Assistant",
     icon: stanford_square,
@@ -526,11 +668,32 @@ const programs = [
     description: "Nurturing an inclusive, safe community in my dorm to support 50+ students' health and wellbeing. Organizing events to foster a sense of belonging.",
   },
   {
+    company: "CS 12SI: Designing for Vision Pro",
+    title: "Co-Lecturer",
+    icon: unity,
+    date: "March 2024 - June 2024",
+    description: "Developed Stanford's first and only Vision Pro course. Taught 20+ students Spatial Prototyping and Design skills for Vision Pro Development. Lead the development portion of the course with XCode, Swift, SwiftUI, ARKit, and RealityKit lectures.",
+  },
+  {
+    company: "CS 11SI: Intro to VR Dev",
+    title: "Teaching Assistant",
+    icon: unity,
+    date: "September 2023 - December 2023",
+    description: "Taught 30+ students VR development skills (Unity, Immersion, Narrative) twice a week. Designing curriculum, managing course logistic, and grading weekly projects.",
+  },
+  {
+    company: "Virtual Human Interaction Lab",
+    title: "VR Intensive Training Seminar",
+    icon: vhil,
+    date: "September 2023 - December 2023",
+    description: "Built multiplayer social-VR worlds with Unity, Normcore, Blender, and Ready Player Me avatars in a VR software engineering internship.",
+  },
+  {
     company: "CodePath",
     title: "IOS 101",
     icon: codepath_inverted,
-    date: "September 2023 - Present",
-    description: "Currently taking Intro to iOS Development and learning Swift, Xcode, and UIKit. Goal of building completed visionOS app.",
+    date: "2023",
+    description: "Completed Intro to iOS Development and learned Swift, Xcode, and UIKit. Utilized skills to begin developing visionOS applications.",
   },
   {
     company: "CodePath",

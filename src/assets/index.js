@@ -60,6 +60,9 @@ import questbridge from "./company/questbridge.png";
 import wu_tsai_hpa from "./company/wu_tsai_hpa.png";
 import codepath from "./company/codepath.png";
 import codepath_inverted from "./company/codepath_inverted.png";
+import ashita_co from "./company/ashita_co.png";
+import ashita_co_inverted from "./company/ashita_co_inverted.png";
+import apple from "./company/apple.png";
 
 import api from "./tech/api.png";
 import blender from "./tech/blender.png";
@@ -143,6 +146,9 @@ export {
   wu_tsai_hpa,
   codepath,
   codepath_inverted,
+  ashita_co,
+  ashita_co_inverted,
+  apple,
   api,
   blender,
   firebase,

@@ -91,15 +91,12 @@ const About = () => {
             {/* Left Column */}
             <div className="flex flex-col items-center min-[1000px]:items-start">
               <p className="mt-4 text-secondary text-[17px] min-[1000px]:max-w-lg w-full leading-[30px]" style={{ textAlign: 'justify' }}>
-                I'm a Junior studying Computer Science at
+                I'm a Senior studying Computer Science at
                 Stanford University set to graduate with both a Bachelor's and Master's
-                by June 2025. I'm currently searching for Summer 2024 SWE or XR development internships.
+                by June 2025. I'm currently searching for full-time positions in SWE or XR development.
                 <br /> <br />
-                With two years of experience, my diverse portfolio is a testament to
-                my unquenchable curiosity and unwavering drive to ignite impactful innovation.
-                Whether it's elevating ADHD screening through immersive VR or
-                reshaping education via generative AI, I'm always in
-                pursuit of new pathways to cultivate meaningful change.
+                I have over four years of experience developing interactive, human-centered applications. 
+                Last summer I was an AR/VR Software Engineer at Apple, working with the Vision Products Group.
                 <br /> <br />
                 I love working with people, and I'm always looking for new
                 opportunities to grow. If this interests you, check out my
