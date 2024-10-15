@@ -88,7 +88,7 @@ import pen_is_mightier from "./projects/The_Pen_Is_Mightier_Than_The_Sword.png";
 import mind_tutor from "./projects/MindTutor.png";
 import cyber_orange from "./projects/CyberOrange.png";
 import blood_divers from "./projects/BloodDivers.jpg";
-import melodify from "./projects/Melodify.png";
+import melodify from "./projects/melodify.jpg";
 import pulsar from "./projects/PulsAR.jpg";
 import dr_trust from "./projects/dr-trust.png";
 import chime from "./projects/chime.png";
