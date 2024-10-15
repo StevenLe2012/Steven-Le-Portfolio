@@ -37,10 +37,10 @@ import me from "./personal/steven_photo.jpg";
 import resume from "./personal/Steven_Le_Resume.pdf";
 
 import vr from "./skills/Futuristic VR Headset.png";
-import unity from "./logo/unity.png"
-import unity_colorful from "./skills/unity.png"
-import software_engineer from "./skills/software_engineer.png"
-import generative_ai from "./skills/generative_ai.png"
+import unity from "./logo/unity.png";
+import unity_colorful from "./skills/unity.png";
+import software_engineer from "./skills/software_engineer.png";
+import generative_ai from "./skills/generative_ai.png";
 
 import vizzario from "./company/vizzario.png";
 import stanford from "./company/stanford.png";
@@ -60,6 +60,10 @@ import questbridge from "./company/questbridge.png";
 import wu_tsai_hpa from "./company/wu_tsai_hpa.png";
 import codepath from "./company/codepath.png";
 import codepath_inverted from "./company/codepath_inverted.png";
+import ashita_co from "./company/ashita_co.png";
+import ashita_co_inverted from "./company/ashita_co_inverted.png";
+import apple from "./company/apple.png";
+import apple_inverted from "./company/apple_inverted.png";
 
 import api from "./tech/api.png";
 import blender from "./tech/blender.png";
@@ -78,13 +82,18 @@ import threejs_inverted from "./tech/threejs_inverted.png";
 import swift from "./tech/swift.png";
 
 import live_logo from "./projects/live_logo.png";
-import live_logo_inverted from "./projects/live_logo_inverted.png"
+import live_logo_inverted from "./projects/live_logo_inverted.png";
 import mindscape_vr from "./projects/MindscapeVR.png";
-import pen_is_mightier from "./projects/The_Pen_Is_Mightier_Than_The_Sword.png"
-import mind_tutor from "./projects/MindTutor.png"
-import cyber_orange from "./projects/CyberOrange.png"
-import blood_divers from "./projects/BloodDivers.jpg"
-
+import pen_is_mightier from "./projects/The_Pen_Is_Mightier_Than_The_Sword.png";
+import mind_tutor from "./projects/MindTutor.png";
+import cyber_orange from "./projects/CyberOrange.png";
+import blood_divers from "./projects/BloodDivers.jpg";
+import melodify from "./projects/melodify.jpg";
+import pulsar from "./projects/pulsar.jpeg";
+import dr_trust from "./projects/dr-trust.png";
+import chime from "./projects/chime.png";
+import table_topsy_trivia from "./projects/Table_Topsy_Trivia.png";
+import table_topsy_trivia_logo from "./projects/TableTopsyTrivia.png";
 
 export {
   logo,
@@ -143,6 +152,10 @@ export {
   wu_tsai_hpa,
   codepath,
   codepath_inverted,
+  ashita_co,
+  ashita_co_inverted,
+  apple,
+  apple_inverted,
   api,
   blender,
   firebase,
@@ -165,4 +178,10 @@ export {
   live_logo_inverted,
   cyber_orange,
   blood_divers,
+  melodify,
+  pulsar,
+  dr_trust,
+  chime,
+  table_topsy_trivia,
+  table_topsy_trivia_logo,
 };
