@@ -73,6 +73,13 @@ import {
   ashita_co,
   ashita_co_inverted,
   apple,
+  apple_inverted,
+  pulsar,
+  melodify,
+  dr_trust,
+  chime,
+  table_topsy_trivia,
+  table_topsy_trivia_logo,
 } from "../assets";
 
 export const navLinks = [
@@ -198,8 +205,8 @@ const experiences = [
   {
     title: "AR/VR Software Engineer Intern",
     company_name: "Apple",
-    icon: apple,
-    iconBg: "#383E56",
+    icon: apple_inverted,
+    iconBg: "#E6DEDD",
     date: "June 2024 - September 2024",
     points: [
       "Developed and designed a prototype feature for visionOS (Swift, SwiftUI, ARKit, and RealityKit).",
@@ -210,8 +217,8 @@ const experiences = [
   {
     title: "AR/VR Software Engineer",
     company_name: "Ashita Co.",
-    icon: ashita_co,
-    iconBg: "#E6DEDD",
+    icon: ashita_co_inverted,
+    iconBg: "#383E56",
     date: "March 2024 - May 2024",
     points: [
       "Designed and prototyped AR/VR R&D XR projects in Japan (Unity, C#).",
@@ -222,12 +229,23 @@ const experiences = [
     title: "Software Engineer Intern",
     company_name: "Vizzario",
     icon: vizzario,
-    iconBg: "#383E56",
+    iconBg: "#E6DEDD",
     date: "September 2022 - June 2024",
     points: [
       "Led the development of an open-source, low-code developer tool for the Stanford Human Perception Lab to automate Vizzario API calls, simplifying deployment from over 300+ lines of code to one function call.",
       "Integrated the Unity Package SDK with well-documented code in 5 enterprise applications.",
       "Continuous Integration/Deployment Pipeline Integration, pull requests, code reviews, end-to-end testing.",
+    ],
+  },
+  {
+    title: "AR/VR Software Engineer Intern",
+    company_name: "Stanford Virtual Human Interaction Lab",
+    icon: vhil,
+    iconBg: "#383E56",
+    date: "September 2023 - December 2023",
+    points: [
+      "Selected to participate in a intensive training seminar to learn about the latest AR/VR research and development.",
+      "Built multiplayer social-VR worlds with Unity, Normcore, Blender, and Ready Player Me avatars that over 200 students will experience.",
     ],
   },
   {
@@ -308,6 +326,51 @@ const testimonials = [
 
 const projects = [
   {
+    name: "TableTopsy Trivia",
+    description:
+      "International visionOS hackathon award-winning spatial AI trivia game. TableTopsy Trivia can infinitely generate trivia questions and answers personalized to each player. This idea works perfectly in Spatial because of the immersive environments you can be in with others during a night of Trivia. ",
+    tags: [
+      {
+        name: "Swift",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "SwiftUI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "ARKit",
+        color: "green-text-gradient",
+      },
+      {
+        name: "RealityKit",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TabletopKit",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Spatial Personas",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "SharePlay",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "OpenAI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "ChatGPT",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: table_topsy_trivia_logo,
+    youtube_demo_link: "https://youtu.be/NFgthkU2pgc?si=Fu4tdEuKgLKQCRuy",
+  },
+  {
     name: "Chime",
     description:
       "Conversational language partner in your pocket. With both iOS and watchOS integration, users are able to practice up to 56 different languages in a natural way that integrates voice recognition, text to speech, speech to text, and AI LLM instant feedback which suggests improvement for grammar and vocabulary.",
@@ -330,7 +393,7 @@ const projects = [
       },
       {
         name: "Python",
-        color: "pink-text-gradient",
+        color: "blue-text-gradient",
       },
       {
         name: "FastAPI",
@@ -338,10 +401,10 @@ const projects = [
       },
       {
         name: "Heroku",
-        color: "pink-text-gradient",
+        color: "green-text-gradient",
       },
     ],
-    image: mindscape_vr,
+    image: chime,
     youtube_demo_link: "https://youtu.be/ic4jd9mJO9g?si=viFtqgPtizSPpYTt",
   },
   {
@@ -371,17 +434,79 @@ const projects = [
       },
       {
         name: "Blender",
-        color: "pink-text-gradient",
+        color: "green-text-gradient",
       },
     ],
-    image: mindscape_vr,
+    image: dr_trust,
     source_code_link: "https://github.com/StevenLe2012/dr-trust",
     youtube_demo_link: "https://youtu.be/b7dJazhTQVk?si=G_f5HBNsJ884bwdP",
   },
   {
+    name: "PulsAR",
+    description:
+      "Apple Vision Pro meditation app that collects the user’s heart rate from their Apple Watch to provide real-time feedback on their meditation progress. Showcased major usecase of HealthKit for visionOS, which was later released by Apple.",
+    tags: [
+      {
+        name: "Swift",
+        color: "green-text-gradient",
+      },
+      {
+        name: "SwiftUI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "ARKit",
+        color: "green-text-gradient",
+      },
+      {
+        name: "RealityKit",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "FastAPI",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Heroku",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: pulsar,
+    youtube_demo_link: "https://youtu.be/fBKzrsaZ9uI?si=2HAulBjlyilKr3wr",
+  },
+  {
+    name: "Melodify",
+    description:
+      "On-the-go music streaming app that offers a comprehensive library of songs, podcasts, and playlists. It allows users to explore, discover, and enjoy a wide range of audio content from various genres and artists worldwide.",
+    tags: [
+      {
+        name: "Swift",
+        color: "green-text-gradient",
+      },
+      {
+        name: "UIKit#",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Spotify API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Social Networking",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: melodify,
+    source_code_link: "https://github.com/StevenLe2012/melodify",
+  },
+  {
     name: "Pen is Mightier",
     description:
-      "Two-player game that merges artistic fun, competitive madness, and fitness benefits in an immersive, high-paced environment. Players are given 20 seconds to recreate a drawing. After which, it is sent to be refined by Stable Diffusion and then the CLIP AI model judges the winner based on the best resemblance to the original image.",
+      "Two-player game that merges artistic fun, competitive madness, and fitness benefits in an immersive, high-paced environment. Players recreate a drawing that is refined by Stable Diffusion and judged by CLIP AI.",
     tags: [
       {
         name: "Unity",
@@ -424,68 +549,6 @@ const projects = [
     source_code_link:
       "https://github.com/StevenLe2012/ImmerseGT-Hackathon-2023",
     youtube_demo_link: "https://www.youtube.com/watch?v=D622-WeCsV0",
-  },
-  {
-    name: "Melodify",
-    description:
-      "On-the-go music streaming app that offers a comprehensive library of songs, podcasts, and playlists. It allows users to explore, discover, and enjoy a wide range of audio content from various genres and artists worldwide.",
-    tags: [
-      {
-        name: "Swift",
-        color: "green-text-gradient",
-      },
-      {
-        name: "UIKit#",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Spotify API",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Social Networking",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: mindscape_vr,
-    source_code_link: "https://github.com/StevenLe2012/melodify",
-  },
-  {
-    name: "PulsAR",
-    description:
-      "Apple Vision Pro meditation app that collects the user’s heart rate from their Apple Watch to provide real-time feedback on their meditation progress. Showcased major usecase of HealthKit for visionOS, which was later released by Apple.",
-    tags: [
-      {
-        name: "Swift",
-        color: "green-text-gradient",
-      },
-      {
-        name: "SwiftUI",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "ARKit",
-        color: "green-text-gradient",
-      },
-      {
-        name: "RealityKit",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Python",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "FastAPI",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Heroku",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: mindscape_vr,
-    youtube_demo_link: "https://youtu.be/fBKzrsaZ9uI?si=2HAulBjlyilKr3wr",
   },
   {
     name: "Mindscape VR",
@@ -672,7 +735,7 @@ const programs = [
   {
     company: "CS 12SI: Spatial Computing Workshop",
     title: "Co-Lecturer",
-    icon: unity,
+    icon: apple,
     date: "March 2024 - June 2024",
     description:
       "Developed Stanford's first and only Apple Vision Pro course. Taught 20+ students Spatial Prototyping and Design skills for Vision Pro Development. Lead the development portion of the course with XCode, Swift, SwiftUI, ARKit, and RealityKit lectures.",
@@ -684,14 +747,6 @@ const programs = [
     date: "September 2023 - December 2023",
     description:
       "Taught 30+ students VR development skills (Unity, Immersion, Narrative) twice a week. Designing curriculum, managing course logistic, and grading weekly projects.",
-  },
-  {
-    company: "Virtual Human Interaction Lab",
-    title: "VR Intensive Training Seminar",
-    icon: vhil,
-    date: "September 2023 - December 2023",
-    description:
-      "Built multiplayer social-VR worlds with Unity, Normcore, Blender, and Ready Player Me avatars in a VR software engineering internship.",
   },
   {
     company: "CodePath",
