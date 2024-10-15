@@ -89,7 +89,7 @@ import mind_tutor from "./projects/MindTutor.png";
 import cyber_orange from "./projects/CyberOrange.png";
 import blood_divers from "./projects/BloodDivers.jpg";
 import melodify from "./projects/melodify.jpg";
-import pulsar from "./projects/PulsAR.jpg";
+import pulsar from "./projects/pulsar.jpg";
 import dr_trust from "./projects/dr-trust.png";
 import chime from "./projects/chime.png";
 import table_topsy_trivia from "./projects/Table_Topsy_Trivia.png";
