@@ -81,6 +81,7 @@ import {
   table_topsy_trivia,
   table_topsy_trivia_logo,
   suika_clone,
+  story_living,
 } from "../assets";
 
 export const navLinks = [
@@ -216,7 +217,7 @@ const experiences = [
     ],
   },
   {
-    title: "AR/VR Software Engineer",
+    title: "AR/VR Software Engineer Intern",
     company_name: "Ashita Co.",
     icon: ashita_co_inverted,
     iconBg: "#383E56",
@@ -414,6 +415,10 @@ const projects = [
       "Award-winning real-time collaborative MR medical diagnosis that connects doctors, patients, and family members to increase trust in the medical field. Utilized Meta's Presence Platform to facilitate difficult medical conversations, allowing doctors to effectively educate and reassure presents by clearly visualizing what the problem is and how it can be treated.",
     tags: [
       {
+        name: "C#",
+        color: "blue-text-gradient",
+      },
+      {
         name: "Unity",
         color: "green-text-gradient",
       },
@@ -449,7 +454,7 @@ const projects = [
     tags: [
       {
         name: "Swift",
-        color: "green-text-gradient",
+        color: "blue-text-gradient",
       },
       {
         name: "SwiftUI",
@@ -461,7 +466,7 @@ const projects = [
       },
       {
         name: "RealityKit",
-        color: "pink-text-gradient",
+        color: "green-text-gradient",
       },
       {
         name: "Python",
@@ -480,6 +485,40 @@ const projects = [
     youtube_demo_link: "https://youtu.be/fBKzrsaZ9uI?si=2HAulBjlyilKr3wr",
   },
   {
+    name: "StoryLiving",
+    description:
+      "Apple Vision Pro spatial memories app. You can view a spatial video or photo with your loved ones in the exact 3D environment in which the memory happened. You aren't just story-telling. You are now story-living.",
+    tags: [
+      {
+        name: "Swift",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "SwiftUI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "RealityKit",
+        color: "green-text-gradient",
+      },
+      {
+        name: "PhotoKit",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Spatial Memories",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Photogrammetry",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: story_living,
+    source_code_link: "https://github.com/StevenLe2012/story-living",
+    youtube_demo_link: "https://youtu.be/jHisBQFxLAs?si=b9yRyTgHtBhqiuyx",
+  },
+  {
     name: "Cute Suika",
     description:
       "Cute Suika is a clone of the popular game Suika. The is a simple and fun game where you have to drop cute animals into the box, trying to match the same animals with one another. If matched, they convert to the next tier of animal and the user gains more points. Try to get the highest score!",
@@ -489,7 +528,7 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "Unity#",
+        name: "Unity",
         color: "green-text-gradient",
       },
       {
@@ -672,32 +711,32 @@ const projects = [
     source_code_link: "https://github.com/StevenLe2012/treehacks-hackathon-23",
     youtube_demo_link: "https://youtu.be/zH3GdwHmTME?si=47otebHoApIe-zwb",
   },
-  {
-    name: "Cyber Orange",
-    description:
-      "Newspaper website that allows journalists to inform 3000+ people during the height of COVID-19. This website revived the Orange Juice Newspaper Club, allowing 15+ journalist to continue writing about world events and keeping the community informed during a major time in need. I also mentored a new developer to continue updating the website.",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Educational",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: cyber_orange,
-    source_code_link: "https://github.com/StevenLe2012/CyberOrange",
-    live_link: "https://orangejuicenew.github.io/CyberOrange-master/",
-  },
+  // {
+  //   name: "Cyber Orange",
+  //   description:
+  //     "Newspaper website that allows journalists to inform 3000+ people during the height of COVID-19. This website revived the Orange Juice Newspaper Club, allowing 15+ journalist to continue writing about world events and keeping the community informed during a major time in need. I also mentored a new developer to continue updating the website.",
+  //   tags: [
+  //     {
+  //       name: "HTML",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "CSS",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "JavaScript",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "Educational",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: cyber_orange,
+  //   source_code_link: "https://github.com/StevenLe2012/CyberOrange",
+  //   live_link: "https://orangejuicenew.github.io/CyberOrange-master/",
+  // },
   {
     name: "Personal Portfolio",
     description:
