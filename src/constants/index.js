@@ -676,9 +676,9 @@ const projects = [
     live_link: "https://orangejuicenew.github.io/CyberOrange-master/",
   },
   {
-    name: "Personal Website",
+    name: "Personal Portfolio",
     description:
-      "Welcome to my website! This is my first project using ThreeJS and React. I want to give special thanks to JavaScript Mastery for the ThreeJS template, which I heavily modified to my liking. I also modified the magical particles effect by Eli Shmerler to fit my website, learning about vertex and fragment shaders along the way. Hope you all enjoyed and learned a lot about me!",
+      "Welcome to my website! I want to give special thanks to JavaScript Mastery for the ThreeJS template, which I heavily modified to my liking. I also modified the magical particles effect by Eli Shmerler to fit my website, learning about vertex and fragment shaders along the way.",
     tags: [
       {
         name: "ThreeJS",
