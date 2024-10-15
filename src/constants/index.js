@@ -72,7 +72,7 @@ import {
   brs,
   ashita_co,
   ashita_co_inverted,
-  apple
+  apple,
 } from "../assets";
 
 export const navLinks = [
@@ -99,7 +99,7 @@ export const navLinks = [
   {
     id: "resume",
     title: "Resume",
-  }
+  },
 ];
 
 export const navMedia = [
@@ -251,11 +251,11 @@ const experiences = [
     points: [
       "Developed and published a therapeutic XR experience that facilitates diaphragmatic breathing, increasing tidal volume by 10.96%.",
       "Designed a proprietary algorithm to track and adapt the user's breathing pattern to gameplay, personalizing user experience.",
-      "Implemented seamless functionality across all XR platforms, including Apple Vision Pro."
+      "Implemented seamless functionality across all XR platforms, including Apple Vision Pro.",
     ],
   },
   {
-    title: "VR Developer & Research Intern",
+    title: "AR/VR Developer & Research Intern",
     company_name: "Stanford Human Perception Lab",
     icon: stanford_med_school,
     iconBg: "#E6DEDD",
@@ -267,7 +267,7 @@ const experiences = [
     ],
   },
   {
-    title: "VR Developer & Research Assistant",
+    title: "AR/VR Developer & Research Assistant",
     company_name: "Stanford Social and Learning Lab",
     icon: stanford,
     iconBg: "#383E56",
@@ -279,32 +279,32 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
+// const testimonials = [
+//   {
+//     testimonial:
+//       "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+//     name: "Sara Lee",
+//     designation: "CFO",
+//     company: "Acme Co",
+//     image: "https://randomuser.me/api/portraits/women/4.jpg",
+//   },
+//   {
+//     testimonial:
+//       "I've never met a web developer who truly cares about their clients' success like Rick does.",
+//     name: "Chris Brown",
+//     designation: "COO",
+//     company: "DEF Corp",
+//     image: "https://randomuser.me/api/portraits/men/5.jpg",
+//   },
+//   {
+//     testimonial:
+//       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+//     name: "Lisa Wang",
+//     designation: "CTO",
+//     company: "456 Enterprises",
+//     image: "https://randomuser.me/api/portraits/women/6.jpg",
+//   },
+// ];
 
 const projects = [
   {
@@ -339,7 +339,7 @@ const projects = [
       {
         name: "Heroku",
         color: "pink-text-gradient",
-      }
+      },
     ],
     image: mindscape_vr,
     youtube_demo_link: "https://youtu.be/ic4jd9mJO9g?si=viFtqgPtizSPpYTt",
@@ -372,7 +372,7 @@ const projects = [
       {
         name: "Blender",
         color: "pink-text-gradient",
-      }
+      },
     ],
     image: mindscape_vr,
     source_code_link: "https://github.com/StevenLe2012/dr-trust",
@@ -421,7 +421,8 @@ const projects = [
       },
     ],
     image: pen_is_mightier,
-    source_code_link: "https://github.com/StevenLe2012/ImmerseGT-Hackathon-2023",
+    source_code_link:
+      "https://github.com/StevenLe2012/ImmerseGT-Hackathon-2023",
     youtube_demo_link: "https://www.youtube.com/watch?v=D622-WeCsV0",
   },
   {
@@ -444,7 +445,7 @@ const projects = [
       {
         name: "Social Networking",
         color: "pink-text-gradient",
-      }
+      },
     ],
     image: mindscape_vr,
     source_code_link: "https://github.com/StevenLe2012/melodify",
@@ -481,7 +482,7 @@ const projects = [
       {
         name: "Heroku",
         color: "pink-text-gradient",
-      }
+      },
     ],
     image: mindscape_vr,
     youtube_demo_link: "https://youtu.be/fBKzrsaZ9uI?si=2HAulBjlyilKr3wr",
@@ -518,10 +519,11 @@ const projects = [
       {
         name: "Mental Health",
         color: "green-text-gradient",
-      }
+      },
     ],
     image: mindscape_vr,
-    source_code_link: "https://github.com/StevenLe2012/metaverse-creators-hackathon-23",
+    source_code_link:
+      "https://github.com/StevenLe2012/metaverse-creators-hackathon-23",
     youtube_demo_link: "https://youtu.be/IRxQi7047UI",
   },
   {
@@ -532,7 +534,6 @@ const projects = [
       {
         name: "Flutter",
         color: "green-text-gradient",
-
       },
       {
         name: "Dart",
@@ -566,7 +567,7 @@ const projects = [
       },
       {
         name: "Adruino",
-        color: "pink-text-gradient"
+        color: "pink-text-gradient",
       },
       {
         name: "C#",
@@ -593,7 +594,6 @@ const projects = [
       {
         name: "HTML",
         color: "blue-text-gradient",
-
       },
       {
         name: "CSS",
@@ -623,7 +623,7 @@ const projects = [
       },
       {
         name: "React",
-        color: "green-text-gradient"
+        color: "green-text-gradient",
       },
       {
         name: "HTML",
@@ -644,7 +644,7 @@ const projects = [
       {
         name: "Vercel",
         color: "green-text-gradient",
-      }
+      },
     ],
     image: me,
     source_code_link: "https://github.com/StevenLe2012/Steven-Le-Portfolio",
@@ -658,78 +658,96 @@ const programs = [
     title: "Vice President of Events",
     icon: stanfordxr,
     date: "April 2023 - Present",
-    description: "Spearheading Stanford's inaugural nationwide XR hackathon, “Immerse The Bay,” scheduled for November 10-12, 2023. Leading team of 10+ students to organize a 400 person event with 20+ sponsors.",
+    description:
+      "Spearheading Stanford's inaugural nationwide XR hackathon, “Immerse The Bay,” scheduled for November 10-12, 2023. Leading team of 10+ students to organize a 400 person event with 20+ sponsors.",
   },
   {
     company: "Stanford University",
     title: "Residential Assistant",
     icon: stanford_square,
     date: "September 2023 - Present",
-    description: "Nurturing an inclusive, safe community in my dorm to support 50+ students' health and wellbeing. Organizing events to foster a sense of belonging.",
+    description:
+      "Nurturing an inclusive, safe community in my dorm to support 50+ students' health and wellbeing. Organizing events to foster a sense of belonging.",
   },
   {
     company: "CS 12SI: Spatial Computing Workshop",
     title: "Co-Lecturer",
     icon: unity,
     date: "March 2024 - June 2024",
-    description: "Developed Stanford's first and only Apple Vision Pro course. Taught 20+ students Spatial Prototyping and Design skills for Vision Pro Development. Lead the development portion of the course with XCode, Swift, SwiftUI, ARKit, and RealityKit lectures.",
+    description:
+      "Developed Stanford's first and only Apple Vision Pro course. Taught 20+ students Spatial Prototyping and Design skills for Vision Pro Development. Lead the development portion of the course with XCode, Swift, SwiftUI, ARKit, and RealityKit lectures.",
   },
   {
     company: "CS 11SI: Intro to VR Dev",
     title: "Teaching Assistant",
     icon: unity,
     date: "September 2023 - December 2023",
-    description: "Taught 30+ students VR development skills (Unity, Immersion, Narrative) twice a week. Designing curriculum, managing course logistic, and grading weekly projects.",
+    description:
+      "Taught 30+ students VR development skills (Unity, Immersion, Narrative) twice a week. Designing curriculum, managing course logistic, and grading weekly projects.",
   },
   {
     company: "Virtual Human Interaction Lab",
     title: "VR Intensive Training Seminar",
     icon: vhil,
     date: "September 2023 - December 2023",
-    description: "Built multiplayer social-VR worlds with Unity, Normcore, Blender, and Ready Player Me avatars in a VR software engineering internship.",
+    description:
+      "Built multiplayer social-VR worlds with Unity, Normcore, Blender, and Ready Player Me avatars in a VR software engineering internship.",
   },
   {
     company: "CodePath",
     title: "IOS 101",
     icon: codepath_inverted,
     date: "2023",
-    description: "Completed Intro to iOS Development and learned Swift, Xcode, and UIKit. Utilized skills to begin developing visionOS applications.",
+    description:
+      "Completed Intro to iOS Development and learned Swift, Xcode, and UIKit. Utilized skills to begin developing visionOS applications.",
   },
   {
     company: "CodePath",
     title: "TIP 103",
     icon: codepath_inverted,
     date: "2023",
-    description: "Completed Advanced Technical Interview Prep and learned data structures, algorithms, and system design.",
+    description:
+      "Completed Advanced Technical Interview Prep and learned data structures, algorithms, and system design.",
   },
   {
     company: "APIA Scholarship Program",
     title: "APIA Scholar",
     icon: apia,
     date: "2023",
-    description: "Selected as one of 40 national AAPI community student leaders to receive the McDonald’s/APIA Scholarship for excellence in academics, community service, and leadership.",
+    description:
+      "Selected as one of 40 national AAPI community student leaders to receive the McDonald’s/APIA Scholarship for excellence in academics, community service, and leadership.",
   },
   {
     company: "Human Performance Alliance",
     title: "Wu Tsai Scholar",
     icon: wu_tsai_hpa,
     date: "2022",
-    description: "Selected as one of 15 students conducting research in human performance. Presented VR + ADHD Screening research at the 2022 Human Perforamnce Alliance symposium to over 100 researchers.",
+    description:
+      "Selected as one of 15 students conducting research in human performance. Presented VR + ADHD Screening research at the 2022 Human Perforamnce Alliance symposium to over 100 researchers.",
   },
   {
     company: "The Gates Scholarship",
     title: "Bill Gates Scholar",
     icon: gates,
     date: "2021",
-    description: "Selected as one of 300 students nationwide to receive a a full-ride scholarship for exceptional student leaders from low-income households (0.8% acceptance rate).",
+    description:
+      "Selected as one of 300 students nationwide to receive a a full-ride scholarship for exceptional student leaders from low-income households (0.8% acceptance rate).",
   },
   {
     company: "QuestBridge",
     title: "College Match Scholar",
     icon: questbridge,
     date: "2021",
-    description: "Selected as one of 1464 students out of the 18,500 to receive a 4-year, full-ride scholarship, worth over $300,000, for low-income, first-generation, high-achieving students (7.9% acceptance rate).",
+    description:
+      "Selected as one of 1464 students out of the 18,500 to receive a 4-year, full-ride scholarship, worth over $300,000, for low-income, first-generation, high-achieving students (7.9% acceptance rate).",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects, programs };
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  programs,
+};
