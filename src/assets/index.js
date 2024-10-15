@@ -94,6 +94,7 @@ import dr_trust from "./projects/dr-trust.png";
 import chime from "./projects/chime.png";
 import table_topsy_trivia from "./projects/Table_Topsy_Trivia.png";
 import table_topsy_trivia_logo from "./projects/TableTopsyTrivia.png";
+import suika_clone from "./projects/suika_clone.png";
 
 export {
   logo,
@@ -184,4 +185,5 @@ export {
   chime,
   table_topsy_trivia,
   table_topsy_trivia_logo,
+  suika_clone,
 };

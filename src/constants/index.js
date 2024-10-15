@@ -80,6 +80,7 @@ import {
   chime,
   table_topsy_trivia,
   table_topsy_trivia_logo,
+  suika_clone,
 } from "../assets";
 
 export const navLinks = [
@@ -477,6 +478,28 @@ const projects = [
     ],
     image: pulsar,
     youtube_demo_link: "https://youtu.be/fBKzrsaZ9uI?si=2HAulBjlyilKr3wr",
+  },
+  {
+    name: "Cute Suika",
+    description:
+      "Cute Suika is a clone of the popular game Suika. The is a simple and fun game where you have to drop cute animals into the box, trying to match the same animals with one another. If matched, they convert to the next tier of animal and the user gains more points. Try to get the highest score!",
+    tags: [
+      {
+        name: "C#",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Unity#",
+        color: "green-text-gradient",
+      },
+      {
+        name: "itch.io",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: suika_clone,
+    source_code_link: "https://github.com/StevenLe2012/suika-clone",
+    live_link: "https://stevenle2012.itch.io/cute-suika",
   },
   {
     name: "Melodify",
