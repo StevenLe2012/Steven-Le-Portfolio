@@ -668,11 +668,11 @@ const programs = [
     description: "Nurturing an inclusive, safe community in my dorm to support 50+ students' health and wellbeing. Organizing events to foster a sense of belonging.",
   },
   {
-    company: "CS 12SI: Designing for Vision Pro",
+    company: "CS 12SI: Spatial Computing Workshop",
     title: "Co-Lecturer",
     icon: unity,
     date: "March 2024 - June 2024",
-    description: "Developed Stanford's first and only Vision Pro course. Taught 20+ students Spatial Prototyping and Design skills for Vision Pro Development. Lead the development portion of the course with XCode, Swift, SwiftUI, ARKit, and RealityKit lectures.",
+    description: "Developed Stanford's first and only Apple Vision Pro course. Taught 20+ students Spatial Prototyping and Design skills for Vision Pro Development. Lead the development portion of the course with XCode, Swift, SwiftUI, ARKit, and RealityKit lectures.",
   },
   {
     company: "CS 11SI: Intro to VR Dev",
