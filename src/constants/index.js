@@ -82,6 +82,7 @@ import {
   table_topsy_trivia_logo,
   suika_clone,
   story_living,
+  rune_wars,
 } from "../assets";
 
 export const navLinks = [
@@ -327,6 +328,44 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "Rune Wars",
+    description:
+      "Won the Best use of Connected Snap for building a competitive co-location multiplayer game. We envision Rune Wars to be a game that revolutionizes the real of digital sports, bringing eSports back to involve actual, physical movement tied in with strategy.",
+    tags: [
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Lens Studio",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Snap Spectacles",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Connected Lens",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Blender",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Scene Understanding",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: rune_wars,
+    source_code_link: "https://github.com/StevenLe2012/rune-wars",
+    youtube_demo_link: "https://youtu.be/ITNNkPJjDDg?si=lv8O11zPw1DfXDTi",
+  },
   {
     name: "TableTopsy Trivia",
     description:
@@ -711,32 +750,32 @@ const projects = [
     source_code_link: "https://github.com/StevenLe2012/treehacks-hackathon-23",
     youtube_demo_link: "https://youtu.be/zH3GdwHmTME?si=47otebHoApIe-zwb",
   },
-  // {
-  //   name: "Cyber Orange",
-  //   description:
-  //     "Newspaper website that allows journalists to inform 3000+ people during the height of COVID-19. This website revived the Orange Juice Newspaper Club, allowing 15+ journalist to continue writing about world events and keeping the community informed during a major time in need. I also mentored a new developer to continue updating the website.",
-  //   tags: [
-  //     {
-  //       name: "HTML",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "CSS",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "JavaScript",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "Educational",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: cyber_orange,
-  //   source_code_link: "https://github.com/StevenLe2012/CyberOrange",
-  //   live_link: "https://orangejuicenew.github.io/CyberOrange-master/",
-  // },
+  {
+    name: "Cyber Orange",
+    description:
+      "Newspaper website that allows journalists to inform 3000+ people during the height of COVID-19. This website revived the Orange Juice Newspaper Club, allowing 15+ journalist to continue writing about world events and keeping the community informed during a major time in need. I also mentored a new developer to continue updating the website.",
+    tags: [
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Educational",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: cyber_orange,
+    source_code_link: "https://github.com/StevenLe2012/CyberOrange",
+    live_link: "https://orangejuicenew.github.io/CyberOrange-master/",
+  },
   {
     name: "Personal Portfolio",
     description:
