@@ -96,6 +96,7 @@ import table_topsy_trivia from "./projects/Table_Topsy_Trivia.png";
 import table_topsy_trivia_logo from "./projects/TableTopsyTrivia.png";
 import suika_clone from "./projects/suika_clone.png";
 import story_living from "./projects/StoryLiving.png";
+import rune_wars from "./projects/RuneWars.png";
 
 export {
   logo,
@@ -188,4 +189,5 @@ export {
   table_topsy_trivia_logo,
   suika_clone,
   story_living,
+  rune_wars,
 };
