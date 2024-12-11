@@ -331,7 +331,7 @@ const projects = [
   {
     name: "Rune Wars",
     description:
-      "Won the Best use of Connected Snap for building a competitive co-location multiplayer game. We envision Rune Wars to be a game that revolutionizes the real of digital sports, bringing eSports back to involve actual, physical movement tied in with strategy.",
+      "Won the Best Use of Connected Snap for building a competitive co-location multiplayer game. We envision Rune Wars to be a game that revolutionizes the real of digital sports, bringing eSports back to involve actual, physical movement tied in with strategy.",
     tags: [
       {
         name: "TypeScript",
